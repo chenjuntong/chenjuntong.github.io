@@ -2,18 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/about/index.html</loc>
-    <lastmod>2015-08-23T08:26:51.413Z</lastmod>
+    <loc>http://yoursite.com/2015/08/24/Hello-World/</loc>
+    <lastmod>2015-08-23T17:47:15.957Z</lastmod>
   </url>
   
   <url>
     <loc>http://yoursite.com/2015/08/23/hexo-post/</loc>
-    <lastmod>2015-08-23T08:17:38.126Z</lastmod>
+    <lastmod>2015-08-23T17:46:54.374Z</lastmod>
   </url>
   
   <url>
-    <loc>http://yoursite.com/2015/08/23/hello-world/</loc>
-    <lastmod>2015-08-23T08:13:26.728Z</lastmod>
+    <loc>http://yoursite.com/about/index.html</loc>
+    <lastmod>2015-08-23T08:26:51.413Z</lastmod>
   </url>
   
 </urlset>
