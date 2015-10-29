@@ -4,7 +4,7 @@
   <subtitle><![CDATA[　　　　　　　　我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-29T07:35:39.692Z</updated>
+  <updated>2015-10-29T07:41:18.478Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,15 +19,13 @@
     <link href="http://yoursite.com/2015/10/29/instagram/"/>
     <id>http://yoursite.com/2015/10/29/instagram/</id>
     <published>2015-10-29T01:52:28.000Z</published>
-    <updated>2015-10-29T07:35:39.692Z</updated>
+    <updated>2015-10-29T07:41:18.478Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
 </blockquote>
 <hr>
 <p>　　2010年，在我们发布Instagram第一个版本的前一晚，我与联合创始人Kevin打赌，第一天大概会有多少人下载这款app。Kevin猜有2500人，我当时特别乐观，赌了把大的，押25000人。第二天，我简直不敢相信我的猜测分毫不差。<br>　　今天，在Instagram的五周岁之际，我们拥有来自世界各地的4亿用户，他们每天上传8000万份相片和视频。回望过去，我们在初代产品上就做到了在简洁和精巧中取得恰到好处的平衡，同时就在去年，我们回炉重造了「搜索&amp;发现」（Search &amp; Explore）功能，发布了全新的私密分享功能「Instagram Direct」，如「Layout」这样的创意拼图工具也应运而生。<br>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。</p>
-<p>###里程碑 #1：头三个月解锁1百万用户成就</p>
-<p>##归档：最大的挑战</p>
-<p>　　上线第一个月的惨状不忍直视——经常凌晨3点睡眼惺忪打开屏幕，上面的服务器警信息接踵而至。自第一天爆炸性地吸引了25000名用户后，数量就持续高速增长直至解锁1百万成就。<br>　　请脑补一下这个场面：争先恐后的人们迫切想要使用你的产品！世上没有任何号角能比这更能激励士气的了，所以我们开启996模式以确保我们可以承受住与日俱增的访问请求。我们起步的时候只用了一台位于洛杉矶的服务器，其性能还不如一台Macbook Pro。当我打电话给主机服务商，要求根据我们第一天的增长情况再添置一台服务器时，他们回复说需要4天的周转期，快马加鞭的话也得要48个小时。鉴于我们的增长态势看起来深不可测，我们决定转移到亚马逊的AWS云服务器上面去。<br>　　由于我们两个都缺乏系统底层架构的经验，我们只能尽所能地狼吞虎咽相关的知识。在<a href="http://www.infoq.com/presentations/" target="_blank" rel="external">QCon</a>和<a href="https://www.youtube.com/user/OreillyMedia" target="_blank" rel="external">Velocity</a>的上面有非常棒的会议视频，还有来自 Facebook, Netflix, Twitter以及其他公司的文章。共享技术知识的开源文化是我们这一行最棒的事情之一了，它也是我们更新维护日志的主要推动力。</p>
+<h2 id="里程碑_#1：头三个月解锁1百万用户成就">里程碑 #1：头三个月解锁1百万用户成就</h2><h2 id="归档：最大的挑战">归档：最大的挑战</h2><p>　　上线第一个月的惨状不忍直视——经常凌晨3点睡眼惺忪打开屏幕，上面的服务器警信息接踵而至。自第一天爆炸性地吸引了25000名用户后，数量就持续高速增长直至解锁1百万成就。<br>　　请脑补一下这个场面：争先恐后的人们迫切想要使用你的产品！世上没有任何号角能比这更能激励士气的了，所以我们开启996模式以确保我们可以承受住与日俱增的访问请求。我们起步的时候只用了一台位于洛杉矶的服务器，其性能还不如一台Macbook Pro。当我打电话给主机服务商，要求根据我们第一天的增长情况再添置一台服务器时，他们回复说需要4天的周转期，快马加鞭的话也得要48个小时。鉴于我们的增长态势看起来深不可测，我们决定转移到亚马逊的AWS云服务器上面去。<br>　　由于我们两个都缺乏系统底层架构的经验，我们只能尽所能地狼吞虎咽相关的知识。在<a href="http://www.infoq.com/presentations/" target="_blank" rel="external">QCon</a>和<a href="https://www.youtube.com/user/OreillyMedia" target="_blank" rel="external">Velocity</a>的上面有非常棒的会议视频，还有来自 Facebook, Netflix, Twitter以及其他公司的文章。共享技术知识的开源文化是我们这一行最棒的事情之一了，它也是我们更新维护日志的主要推动力。</p>
 <p>　　干货总结：我们的信条，“简单的事情先做”脱胎于最初的岁月。因为只有我们两个人并肩作战，所以每当我们面临新的挑战时，我们不得不采用最快的、最简单的解决办法。假如我们以完美的态度要求每一件事情，那我们很有可能在无所作为中灭亡。通过找出最先需要解决的问题，以及选择最简单的解决办法，我们才有能力支撑起我们的指数型增长。</p>
 <p>##里程碑 #2：发布安卓版Instagram</p>
 <p>##归档：最众望所归的发布<br>　　在Instagram发布的头几年里，Kevin和我每一次在台上都会被问到同一个问题，“安卓版的应用到底什么时候才会出来？！”<br>　　我们从iOS版起家——仅仅是因为我们想要在我们的产品上做到快速迭代——毕竟我们只有两个工程师。当跨入2012年后，是时候扩展到其他不同的平台了。我们的安卓版app也是典型的Instagram风格，以Philip领衔的三位工程师在三个月内做出来了，其中两位的安卓开发还是现学现卖的。Philip是在我们开发另一款软件Gowalla的安卓版app时加入的，直到今天他依然领导着Instagram的移动化。<br>　　因为我们想要在尽可能多的安卓手机上测试我们的app，甚至包括华为的一款冷门手机“M865 Ascend II 2 Touch”，所以有时候我化身为“eBay皇冠买家”。大多数时候，新手机的屁股还没在办公桌上坐热，我们就立即拆掉快递盒装上我们的半成品app试运行，然后为app的运行效果赞不绝口。安卓设备的产品线之广以至于我们面临了一些挑战——特别是当我们开发Instagram的视频功能时——但最终安卓版app做到了稳定运行在如此之多的手机上而不怎么需要针对某些机型做特殊修改，不得不说太给力了。<br>　　<br><img src="http://ww4.sinaimg.cn/large/6ccda21fjw1ex67ey3yilj210m0l4dkh.jpg" alt="HTC"></p>
@@ -65,7 +63,7 @@
     <link href="http://yoursite.com/2015/08/23/elon%20musk/"/>
     <id>http://yoursite.com/2015/08/23/elon musk/</id>
     <published>2015-08-23T08:17:38.000Z</published>
-    <updated>2015-10-29T07:35:38.585Z</updated>
+    <updated>2015-10-29T07:41:11.552Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p><i class="icon-paste"></i> 原文地址：<a href="http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html" target="_blank" rel="external">Elon Musk: The World’s Raddest Man</a><br><i class="icon-pencil"></i> <strong><em>作者：Tim Urban</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
 </blockquote>
@@ -104,8 +102,7 @@
 <p>相比之下宙斯的工作压力都会轻松许多。</p>
 <p>　　所以我为了准备西海岸之行，花了整整两个星期废寝忘食地阅读，并且我很快清楚地意识到这系列文章的主题肯定会是五花八门的，实在是要涉猎太多的东西了。<br>　　在接下来的文章中，我们将会深入Musk的公司和工厂。但现在，让我们首先了解下这个家伙究竟是怎样一个人，以及为什么他能成为齐天大圣。
 　　</p>
-<p>##Elon Musk的成才之路</p>
-<p><em>提示：5月19日将会有一本很棒的Musk传记面世，作者是科技作家Ashlee Vance。我得到了一份样稿，并且发现它是把这一系列文章串起来的关键钥匙。我打算在这里带领你们简短地回顾一下Musk的人生——如果你想了解更多，<a href="http://www.amazon.cn/Elon-Musk-How-the-Billionaire-CEO-of-SpaceX-and-Tesla-is-shaping-our-Future-Vance-Ashlee/dp/B00SIDCSWY/ref=tmm_kin_title_0?_encoding=UTF8&amp;sr=8-1&amp;qid=1437021781" target="_blank" rel="external">去买这本书吧！</a></em></p>
+<h2 id="Elon_Musk的成才之路">Elon Musk的成才之路</h2><p><em>提示：5月19日将会有一本很棒的Musk传记面世，作者是科技作家Ashlee Vance。我得到了一份样稿，并且发现它是把这一系列文章串起来的关键钥匙。我打算在这里带领你们简短地回顾一下Musk的人生——如果你想了解更多，<a href="http://www.amazon.cn/Elon-Musk-How-the-Billionaire-CEO-of-SpaceX-and-Tesla-is-shaping-our-Future-Vance-Ashlee/dp/B00SIDCSWY/ref=tmm_kin_title_0?_encoding=UTF8&amp;sr=8-1&amp;qid=1437021781" target="_blank" rel="external">去买这本书吧！</a></em></p>
 <p>　　Musk于1971年出生在南非。他的童年并非无忧无虑——家庭环境困苦，永远不适应学校生活。但是，正如你经常在伟人传记中读到的一样，对知识如饮甘霖的他很早就开始自学了。他的弟弟Kimbal回忆说，Elon那时每天经常读10个小时书以上——一般都是科幻小说，后来，浩如烟海的非小说类书籍也进入了他的阅读书单。在四年级的时候，他开始坚持不懈地醉心于研读《大英百科全书》了。<br>　　你将从Musk身上学到的一个启发是，他把人类当作计算机，当然不是字面意思，而是在本质上做类比。一个人的硬件是他的身躯和大脑，他的软件是他学习思考的方式、他的三观、他的习惯以及他的个性。对于Musk来说，学习就像是“把数据和算法下载进大脑”的过程。当他还坐在教室里听老师照本宣科时，最不爽的事之一便是“龟速的下载速度”——直到今天，他的大部分知识都来源于自学。<br>　　在他9岁那年，他拥有了第一部电脑<a href="https://en.wikipedia.org/wiki/Commodore_VIC-20" target="_blank" rel="external">Commodore VIC-20</a> ，从此玩电子游戏成了他的第二大爱好。这部电脑配有5千字节的内存，还附送了一份“如何编程”的指南，正常来说读者要花6个月才学得完，9岁的Elon在3天内就读完它了。在12岁的时候，他运用他所学的知识开发了一款叫Blastar的小游戏，这款游戏用他的话说“只是一个微不足道的游戏罢了……不过比Flappy Bird好玩多了。”但是在1983年，一家电脑杂志社以500美元的价格购买了它（相当于今天的1200美元）——这对于一个12岁的小男孩来说还不赖。</p>
 <p>　　Musk永远都不觉得自己跟南非有多大羁绊——他没有融入当地的白人文化，并且那里对于一个潜在的创业家来说就是一个噩梦般的国度。他把硅谷看作是迦南（译者注：《旧约》中的圣地），并且在17岁那年永远地离开了南非。由于他母亲是加拿大公民的关系，这里移民更容易，他决定从加拿大起步。数年之后，通过大学转学到宾夕法尼亚大学的方式，Musk进入了美国。<br>　　在大学里，他以下面这个问题作为出发点，开始思索这辈子最想要干什么——“在未来什么东西能对人类产生最深远的影响？”脑海里随之蹦出来的，是一份包含五个东西的列表：“互联网；可持续能源；太空探索，特别是超越地球个体的永恒生命延伸；人工智能；以及人类基因密码重组。”<br>　　<br>　　他对后两者的影响有多大积极性表示怀疑，但他对前三者的每一项都感到乐观，而他当时也没想到有朝一日会参与进太空探索。这样他投身奋斗的选项就剩下互联网和可持续能源了。<br>　　他决定从可持续能源入手。在完成大学学业之后，他报读了一个斯坦福博士项目以学习高密度能量储存装置，这项技术目标在于开发一种比传统电池更高效率的能量储存方法——他知道这是开启通往未来可持续能源的关键钥匙，并且能加速电动汽车时代的到来。</p>
 <p>　　但在入学的两天之后，害怕错过有趣事物的心态淹没了他，因为那是1995年，他“没办法眼睁睁看着互联网擦身而过——（他）想要纵身跃进互联网浪潮并增益其所不能。”所以他反而决定退学并去尝试互联网。<br>　　他的首要行动就是试着去1995年的互联网巨兽网景公司谋一份差事。他能想出来的策略就是被当作不速之客走进大厅里，然后尴尬地站在那里——他太害羞以至于跟任何人都开不了口，最后悻悻然地走出来。<br>　　<br>　　Musk默默无名的生涯逆袭之路始于与他弟弟Kimbal（他也随Elon来到美国）一起创立的新公司Zip2。Zip2就像是Yelp（译者注：美国最大点评网站）和谷歌地图的粗糙结合，但贵为任何类似产品的开山鼻祖。它的目标是让企业们意识到黄页的时代终将逝去，从而自己放上在线目录会是一个更棒的想法。这哥儿俩一贫如洗，睡在办公室、洗在YMCA（译者注：Young Men’s Christian Association，基督教青年会），而作为主力程序员的Elon在电脑上日以继夜地工作，码红了眼。</p>
