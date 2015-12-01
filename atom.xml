@@ -4,7 +4,7 @@
   <subtitle><![CDATA[　　　　　　　　我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-12-01T12:01:34.312Z</updated>
+  <updated>2015-12-01T12:06:37.679Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="http://yoursite.com/2015/12/01/qiup/"/>
     <id>http://yoursite.com/2015/12/01/qiup/</id>
     <published>2015-12-01T11:51:02.000Z</published>
-    <updated>2015-12-01T12:01:34.312Z</updated>
+    <updated>2015-12-01T12:06:37.679Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
 </blockquote>
@@ -58,7 +58,7 @@
     
     </summary>
     
-      <category term="英文翻译；科技文章；创业故事" scheme="http://yoursite.com/tags/%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91%EF%BC%9B%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%EF%BC%9B%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B/"/>
+      <category term="英文科技文章翻译 创业故事" scheme="http://yoursite.com/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91-%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B/"/>
     
       <category term="原创英文翻译" scheme="http://yoursite.com/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
@@ -69,7 +69,7 @@
     <link href="http://yoursite.com/2015/10/29/instagram/"/>
     <id>http://yoursite.com/2015/10/29/instagram/</id>
     <published>2015-10-29T01:52:28.000Z</published>
-    <updated>2015-12-01T12:01:23.884Z</updated>
+    <updated>2015-12-01T12:06:38.720Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
 </blockquote>
@@ -98,7 +98,7 @@
     
     </summary>
     
-      <category term="英文翻译；科技文章" scheme="http://yoursite.com/tags/%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91%EF%BC%9B%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0/"/>
+      <category term="英文科技文章翻译" scheme="http://yoursite.com/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
     
       <category term="原创英文翻译" scheme="http://yoursite.com/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
