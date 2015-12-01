@@ -1,0 +1,507 @@
+
+ <!DOCTYPE HTML>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  
+    <title>13位工程师组成的小团队如何在8个不同的平台上成功打造产品 | 　陈钧桐的记忆宫殿</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+    
+    <meta name="author" content="陈钧桐">
+    
+
+    
+    <meta name="description" content="原文地址：How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms 作者：Edmond Lau   翻译：陈钧桐  整理定稿：覃超">
+<meta property="og:type" content="article">
+<meta property="og:title" content="13位工程师组成的小团队如何在8个不同的平台上成功打造产品">
+<meta property="og:url" content="http://yoursite.com/2015/12/01/qiup/index.html">
+<meta property="og:site_name" content="　陈钧桐的记忆宫殿">
+<meta property="og:description" content="原文地址：How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms 作者：Edmond Lau   翻译：陈钧桐  整理定稿：覃超">
+<meta property="og:updated_time" content="2015-12-01T12:12:39.978Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="13位工程师组成的小团队如何在8个不同的平台上成功打造产品">
+<meta name="twitter:description" content="原文地址：How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms 作者：Edmond Lau   翻译：陈钧桐  整理定稿：覃超">
+
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/jacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/jacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
+</head>
+
+  <body>
+    <header>
+      
+<div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/baracktocat.jpg##img/logo.png" alt="　陈钧桐的记忆宫殿" title="　陈钧桐的记忆宫殿"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="　陈钧桐的记忆宫殿">　陈钧桐的记忆宫殿</a></h1>
+				<h2 class="blog-motto">　　　　　　　　我思故我在</h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="菜单">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					<ul>
+					 
+						<li><a href="/">主页 | Home</a></li>
+					
+						<li><a href="/archives">归档 | Archives</a></li>
+					
+						<li><a href="/about">关于我 | About</a></li>
+					
+					<li>
+ 					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="search" id="search" name="q" autocomplete="off" maxlength="20" placeholder="搜索" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+    </header>
+    <div id="container">
+      <div id="main" class="post" itemscope itemprop="blogPost">
+  
+	<article itemprop="articleBody"> 
+		<header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/12/01/qiup/" title="13位工程师组成的小团队如何在8个不同的平台上成功打造产品" itemprop="url">13位工程师组成的小团队如何在8个不同的平台上成功打造产品</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="陈钧桐" target="_blank" itemprop="author">陈钧桐</a>
+		
+  <p class="article-time">
+    <time datetime="2015-12-01T11:51:02.000Z" itemprop="datePublished"> 发表于 2015-12-01</time>
+    
+  </p>
+</header>
+	<div class="article-content">
+		
+		<div id="toc" class="toc-article">
+			<strong class="toc-title">文章目录</strong>
+		
+			
+		
+		</div>
+		
+		<blockquote>
+<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
+</blockquote>
+<hr>
+<p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？</p>
+<p>自从在Quora工作以来（以及最近在Quip的这些年），我一直在努力地思考这个问题。我是在Quora和Quip分别只有12人和13人的时候加入的。这两家初创企业都有雄心勃勃的使命。① Quora致力于分享和增长全世界的知识，同时建造一座互联网上的“亚历山大图书馆”。②在Quip，我们立志于打造出新一代的生产力工具，它能让每一家公司的每一个人在每一天使用起来都非常享受。</p>
+<p>当你同时兼备一支小团队和壮志凌云的目标，惟一一个能成就伟业的方法就是专心在那些能带来巨大影响力的事情上——它们能为你的时间投资带来丰厚的回报。</p>
+<p>目前为止在Quip里，这样把资源集中以小搏大的项目最后都如愿以偿。我们已经能够签下越来越多喜欢这款产品的客户，包括Facebook，Pinterest，Stripe, Instacart, Product Hunt, New Relic,以及许多其他家喻户晓的名字。我们的产品线全面覆盖了8个不同的平台（web, Mac, Windows, iPhone, iPad, Android phones, Android tablets, 以及Apple Watch）。而这一切，全靠我们13位工程师（包括两位联合创始人）。（大魔王：8个平台，13位工程师，实在是太厉害了。）</p>
+<p>我们的征途依然是星辰大海，不过我在这里给出一些准则和方法，它们为我们这个小团队滚出了巨大的雪球。</p>
+<p>##1. Build once, use multiple times<br>    只造一次，随处可用</p>
+<p>无论你在写软件的任何时候，优秀的抽象编程总是至关重要的，能横跨不同平台的抽象编程对我们这个小团队尤为宝贵。假如我们不得不分别在8个不同平台上从头开始构建产品，我们就不可能走到今天这么远。所以我们在库和体系架构方面投入了大量的精力，来确保我们只用造一次轮子就能在多个平台使用。</p>
+<p>举个例子，我们在数据存储、内存数据结构以及跨平台通讯上广泛地使用 Protocol Buffers（译者注：谷歌开发的一种可扩展的结构化数据存储格式）。这让我们能够便捷地完成很多事情，比如直接从MySQL读取Protocol Buffers③；在Python 网页服务器上修改数据；然后把它们发送给我们的native clients（译者注：谷歌开发的一种可以让浏览器直接运行机器码的沙盒技术），这些native clients上使用的数种语言包括C++, Objective C, Java或者C#；甚至还可以把那些相同的数据结构下载到我们的JavaScript编辑器。此外，所有这些操作都是通过自动生成的数据串行化代码完成的，有着强类型数据结构的它们同时运行在强类型的通讯渠道上。假如我们使用的特定语言专用的数据结构或者甚至是JSON，通过如此繁杂的步骤来处理数据不仅将会变得非常乏味，而且也会容易出错。</p>
+<p>“只造一次，随处可用”的精神在其他许多场合也出现过。为了在桌面版、移动端上同步数据以及支持离线使用，我们使用了相同的C++库。横跨所有设备的文档编辑器都运行在相同的JavaScript库上——然后再针对各自平台进行优化，让用户体验变得更加流畅完美。我们的网页版，Mac和Windows桌面应用都是共用了同一套React的UI代码，使其在各自平台上都更接近于原生应用。④</p>
+<p>使用这些技术并不能一劳永逸地解决所有挑战，但是它们确实大大减轻了工作量。</p>
+<p>##2. Take advantage of in-network referrals for hiring<br>    在招聘上利用好人际网络的引荐</p>
+<p>在我有幸共事过的团队中，Quip有着最聪明的那撮人。在开发方面，团队里的绝大部分人拥有至少6年的从业经验，甚至超过一半工程师的经验超过10年。</p>
+<p>对于初创企业来说，掌握如此丰富的从业经验弥足珍贵：我们能靠一己之力去解决遇到的困难，我们相信每一个人都在做正确的东西。与有着更多初级工程师的团队相比，我们并不需要花太多的时间去培养新员工。显然，我们同时也可以避免早期职业生涯已经犯过的错误，这样可以显著提高数倍A/B测试框架或者监视系统的效率。从业经验让我们在解决产品挑战方面更加游刃有余。</p>
+<p>为了组建这样的团队，我们很好地利用了人际网络的引荐。许多Quip工程师在加入前就曾经共事过，这样就减少了招聘过程中的风险和麻烦。即使你的职业生涯刚起步，与你喜欢共事的朋友保持联系也是很重要的。来日方长，也许你能找到不错的机会重新在一起工作。</p>
+<p>##3. Invest heavily in tooling<br>    在工具化上投入大量精力</p>
+<p>小魔王插播：Facebook早年和现在一直就在 internal tools 组里投入了特别厉害的工程师来开发内部的各种工具。比如我们的任务管理工具 task，代码审核和查看工具 phabricator，以及后来的各种基础设施、数据分析和统计工具，比如：Heystack，Scribe，PTail。而即使现在名声大噪的 Kafka，之前也只是LinkedIn的一个内部基础设施项目。但是国内公司我经常发现工程师们对于做工具或者做内部设施没啥兴趣，只喜欢做看得见摸得着的界面或者功能，殊不知这些界面和功能都是PM和设计还有老板们说的算，技术含量也并不高。</p>
+<p>工具链能让你的回报加倍。随着时间的积累，它们的益处也会越来越明显。在Quip，我们造了大量工具来帮助我们更快地进行开发：比如能够使用堆栈跟踪来收集统计错误的表盘；比如能用来调试错误和检查状态的工具；比如能分析代码和查出一般错误的git commit hooks；以及其他许多自动化脚本来执行各种枯燥无味的任务。我们实现了从性能指标到客户留存率的数据可视化，这样我们就能更清楚地明白目前的进展。我们为自己的售后部门和业务部门开发了内部专用的工具，这样他们就能帮助客户快速地处理任何问题。</p>
+<p>专注于工具化同时也节约了我们的运营开销。持续不断的内部整合让我们的公司保持在健康状态，部署自动化脚本简化了我们的发布流程。精细化的（程序）警报大大减轻了工作压力，比如这些警报只会在工作时间推送给随叫随到的工程师。最终的结果是，与我所工作过的其他创业公司相比，Quip分配的寻呼机几乎形同虚设——过去的一年时间里我只有两三次是在半夜里收到警报推送的。所有在工具化上的投入让我们能把更多的时间分配给开发新功能，而不只是花在维护上。</p>
+<p>##4. Put more wood behind fewer arrows<br>    有的放矢</p>
+<p>我们列出了无数乐于去开发的功能和改进，但时间和资源都是有限的。所以我们应该把精力集中在关键的里程碑（事物）上，同时主动地为功能和bug进行优先级排序也很重要,这样我们的战线就不会拉得太长。任务切换的开销非常大，我们选择不做什么跟选择做什么是同等重要的。</p>
+<p>在这方面，用户的反馈无论是数量上还是质量上都尤为宝贵。对于A/B测试来说，我们会努力地把所有想法分解成为可以进行测试论证的假设，这样我们就能进行评估以少走弯路。在功能层面，我们可以先开发出一个最小可用产品，然后进行用户测试来收集所有原始反馈，以此来了解客户不明白的地方，以及是哪方面起了作用。或者有时候我们可以为少数客户推出一项新功能，然后通过与他们紧密地联系合作，了解他们喜欢什么，讨厌什么。</p>
+<p>比方说当发布Mac版和Windows版的应用时，我们是在不同阶段将它们推送给员工、alpha测试者和beta测试者的（基于他们想成为早期试用者的意愿值，以及对bug的容忍度）。他们的反馈（当然是利用Quip）帮助我们把精力集中在桌面应用用户最关心的功能上面。我们可以把其他功能稍作推迟。</p>
+<p>##5. Reduce the friction of communication<br>    减少沟通上的摩擦</p>
+<p>对于开发团队来说，电子邮件和会议可以说是精力的两大黑洞 （大魔王：注意！）。所以在Quip，我们普遍都很排斥它们。除了进行 Code review 以及发布几种主要类型的警报，我们在内部并不通过电子邮件进行技术沟通。在平常的每个星期，工程师只有一个小时的计划内开会时间：30分钟的全员会议是我们分享各自进展以及展示Demo的场合，在这之后也许会有若干小项目的内部会议，或者一对一的单独沟通。必要时我们会专门开有针对性的会。</p>
+<p>我们之间大部分的沟通交流理所当然是通过Quip。这款产品是我们如何在公司里进行协作的法宝，我们每天都通过它完成任何事。我们使用Quip来设计文档，列任务清单，给客户提供支持，还有聊天。我们还为Pager Duty, Zendesk, Twitter, Jenkins, Stripe, Crashlytics, Github以及很多公司内置了 integrations 功能，这样一旦有任何事情发生，他们整个团队讨论起来就方便多了。如果有一位用户在推特上报告了一个bug并@了QuipSupport，那么在Quip内浏览推特聊天频道的任何一个人都可以直接@一位工程师然后问他是否已知晓这个bug。如果客户成功部门（Customer Success）或者某位销售员想要转达来自客户的功能需求，她可以把它加在反馈文件或者待办事项中，相关负责人会立即介入，并为此项工作列出优先级别。我们甚至有一份和本地三明治&amp;沙拉餐厅共享的文档，我们只要输入午餐菜单，棒棒的外卖小哥每天中午就会把它们送到办公室。</p>
+<p>纵观一个团队的成长进程，沟通通常是第一个碰上的大麻烦，任何能减少沟通摩擦的工具——无论它是Quip, Slack或者其他东西——都可以显著地提高团队的工作效率。把Quip整合到团队的工作流中让我们得以通力合作，这是传统如电子邮件和会议的沟通方式不可能达到的效果。同时它也帮助公司建立起公开透明的文化，因为邮件里的信息会在一部分收件人手里沉默。相比之下，Quip 的文档正逐渐成为团队里每一位成员愈发丰富的知识宝库。每一份文档的留言和讨论都有据可查，我们所有人都在同一页上。</p>
+<p>我们如今已经取得了很多进步，但前方漫漫长路依然充满挑战。假如你对在Quip工作很感兴趣，不妨移步到我们的招聘页面。假如你想要学习更多的具有可操作性以及经证实的方法策略来成为一名高效工程师，不妨看一下我的这本书，《The Effective Engineer》。<br>这篇文章基于我在Quora上最开始写的一个答案，Slate也有转载。<br>①除了雄心壮志，Quora和Quip在许多方面都有共同点。它们都是由前Facebook CTO创立的，都从Benchmark风投拿到了A轮融资，当然，也都是从Qu起步的。<br>②我们的使命，来自Quora博客。<br>③我们的MySQL数据存储使用了一种类似于FriendFeed的非模式化MySQL设计，不同的是，我们并不使用Python对象序列化方法，而是采用了Protocol Buffers。<br>④Bret Taylor（译者注：Quip的创始人，前Facebook CTO）写过一篇更加鞭辟入里的技术文章，其详细描述了我们（在产品中）共同的C++库和React架构：React with C++: Building the Quip Mac and Windows Apps.</p>
+  
+	</div>
+		<footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/原创英文翻译/">原创英文翻译</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/创业故事/">创业故事</a><a href="/tags/英文科技文章翻译/">英文科技文章翻译</a>
+  </div>
+
+</div>
+
+
+
+	<div class="article-share" id="share">
+	
+	  <div data-url="http://yoursite.com/2015/12/01/qiup/" data-title="13位工程师组成的小团队如何在8个不同的平台上成功打造产品 | 　陈钧桐的记忆宫殿" data-tsina="null" class="share clearfix">
+	  </div>
+	
+	</div>
+
+
+</footer>
+
+   	       
+	</article>
+	
+<nav class="article-nav clearfix">
+ 
+
+<div class="next">
+<a href="/2015/10/29/instagram/"  title="缔造Instagram的这五年">
+ <strong>下一篇：</strong><br/> 
+ <span>缔造Instagram的这五年
+</span>
+</a>
+</div>
+
+</nav>
+
+	
+<section id="comments" class="comment">
+	<div class="ds-thread" data-thread-key="2015/12/01/qiup/" data-title="13位工程师组成的小团队如何在8个不同的平台上成功打造产品" data-url="http://yoursite.com/2015/12/01/qiup/"></div>
+</section>
+
+
+</div>  
+      <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
+
+  <div id="toc" class="toc-aside">
+  <strong class="toc-title">文章目录</strong>
+ 
+ 
+ 
+  </div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
+<aside class="clearfix">
+
+  
+<div class="categorieslist">
+	<p class="asidetitle">分类</p>
+		<ul>
+		
+		  
+			<li><a href="/categories/原创英文翻译/" title="原创英文翻译">原创英文翻译<sup>3</sup></a></li>
+		  
+		
+		</ul>
+</div>
+
+
+  
+<div class="tagslist">
+	<p class="asidetitle">标签</p>
+		<ul class="clearfix">
+		
+			
+				<li><a href="/tags/英文科技文章翻译/" title="英文科技文章翻译">英文科技文章翻译<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/英文翻译-科技文章/" title="英文翻译 科技文章">英文翻译 科技文章<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/创业故事/" title="创业故事">创业故事<sup>1</sup></a></li>
+			
+		
+		</ul>
+</div>
+
+
+  <div class="linkslist">
+  <p class="asidetitle">友情链接</p>
+    <ul>
+        
+          <li>
+            
+            	<a href="http://zhuanlan.zhihu.com/qinchao/" target="_blank" title="ChaoQIN&#39;s Blog">ChaoQIN&#39;s Blog</a>
+            
+          </li>
+        
+          <li>
+            
+            	<a href="http://cocode.cc/ " target="_blank" title="一个让大家学习、成长、相聚并获得乐趣的技术社区">CoCode</a>
+            
+          </li>
+        
+    </ul>
+</div>
+
+  
+
+
+  <div class="rsspart">
+	<a href="undefined" target="_blank" title="rss">RSS 订阅</a>
+</div>
+
+</aside>
+</div>
+    </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<section class="info">
+		<p> Hello ,I&#39;m CHEN Juntong.An undergraduate at South China Agricultural University. <br/>
+			Welcome to my Memory Palace.</p>
+	</section>
+	 
+	<div class="social-font" class="clearfix">
+		
+		
+		<a href="https://github.com/chenjuntong" target="_blank" class="icon-github" title="github"></a>
+		
+		
+		
+		
+		<a href="https://www.facebook.com/chenjuntong94" target="_blank" class="icon-facebook" title="facebook"></a>
+		
+		
+		<a href="https://www.linkedin.com/in/chenjuntong" target="_blank" class="icon-linkedin" title="linkedin"></a>
+		
+		
+		
+		<a href="http://www.zhihu.com/people/Chenjuntong" target="_blank" class="icon-zhihu" title="知乎"></a>
+		
+		
+		
+		<a href="mailto:chen_juntong@foxmail.com" target="_blank" class="icon-email" title="Email Me"></a>
+		
+	</div>
+			
+		
+
+		<p class="copyright">
+		Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/wuchong/jacman" target="_blank" title="Jacman">Jacman</a> © 2015 
+		
+		<a href="/about" target="_blank" title="陈钧桐">陈钧桐</a>
+		
+		
+		</p>
+</div>
+</footer>
+    <script src="/js/jquery-2.0.3.min.js"></script>
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/jquery.qrcode-0.12.0.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+  
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else{
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+      
+      $('#toc.toc-aside').css('display', 'none');
+        
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var ai = $('.article-content>iframe'),
+      ae = $('.article-content>embed'),
+      t  = $('#toc'),
+      ta = $('#toc.toc-aside'),
+      o  = $('.openaside'),
+      c  = $('.closeaside');
+  if(ai.length>0){
+    ai.wrap('<div class="video-container" />');
+  };
+  if(ae.length>0){
+   ae.wrap('<div class="video-container" />');
+  };
+  c.click(function(){
+    ta.css('display', 'block').addClass('fadeIn');
+  });
+  o.click(function(){
+    ta.css('display', 'none');
+  });
+  $(window).scroll(function(){
+    ta.css("top",Math.max(140,320-$(this).scrollTop()));
+  });
+});
+</script>
+
+
+<script type="text/javascript">
+$(document).ready(function(){ 
+  var $this = $('.share'),
+      url = $this.attr('data-url'),
+      encodedUrl = encodeURIComponent(url),
+      title = $this.attr('data-title'),
+      tsina = $this.attr('data-tsina'),
+      description = $this.attr('description');
+  var html = [
+  '<div class="hoverqrcode clearfix"></div>',
+  '<a class="overlay" id="qrcode"></a>',
+  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
+  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
+  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
+  '<span title="Share to"></span>'
+  ].join('');
+  $this.append(html);
+
+  $('.hoverqrcode').hide();
+
+  var myWidth = 0;
+  function updatehoverqrcode(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+    var qrsize = myWidth > 1024 ? 200:100;
+    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
+    var p = $('.article-share-qrcode').position();
+    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
+                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
+                          .qrcode(options);
+  };
+  $(window).resize(function(){
+    $('.hoverqrcode').hide();
+  });
+  $('.article-share-qrcode').click(function(){
+    updatehoverqrcode();
+    $('.hoverqrcode').toggle();
+  });
+  $('.article-share-qrcode').hover(function(){}, function(){
+      $('.hoverqrcode').hide();
+  });
+});   
+</script>
+
+
+
+<script type="text/javascript">
+  var duoshuoQuery = {short_name:"chenjuntong"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+    || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+</script> 
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.article-content').each(function(i){
+    $(this).find('img').each(function(){
+      if ($(this).parent().hasClass('fancybox')) return;
+      var alt = this.alt;
+      if (alt) $(this).after('<span class="caption">' + alt + '</span>');
+      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="fancybox"></a>');
+    });
+    $(this).find('.fancybox').each(function(){
+      $(this).attr('rel', 'article' + i);
+    });
+  });
+  if($.fancybox){
+    $('.fancybox').fancybox();
+  }
+}); 
+</script>
+
+
+
+<!-- Analytics Begin -->
+
+
+
+
+
+<!-- Analytics End -->
+
+<!-- Totop Begin -->
+
+	<div id="totop">
+	<a title="返回顶部"><img src="/img/scrollup.png"/></a>
+	</div>
+	<script src="/js/totop.js"></script>
+
+<!-- Totop End -->
+
+<!-- MathJax Begin -->
+<!-- mathjax config similar to math.stackexchange -->
+
+
+<!-- MathJax End -->
+
+<!-- Tiny_search Begin -->
+
+<!-- Tiny_search End -->
+
+  </body>
+</html>

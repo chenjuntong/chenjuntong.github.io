@@ -4,7 +4,7 @@
   <subtitle><![CDATA[　　　　　　　　我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2015-10-29T07:41:11.552Z</updated>
+  <updated>2015-12-01T12:12:39.978Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -13,6 +13,98 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[13位工程师组成的小团队如何在8个不同的平台上成功打造产品]]></title>
+    <link href="http://yoursite.com/2015/12/01/qiup/"/>
+    <id>http://yoursite.com/2015/12/01/qiup/</id>
+    <published>2015-12-01T11:51:02.000Z</published>
+    <updated>2015-12-01T12:12:39.978Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
+</blockquote>
+<hr>
+<p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？</p>
+<p>自从在Quora工作以来（以及最近在Quip的这些年），我一直在努力地思考这个问题。我是在Quora和Quip分别只有12人和13人的时候加入的。这两家初创企业都有雄心勃勃的使命。① Quora致力于分享和增长全世界的知识，同时建造一座互联网上的“亚历山大图书馆”。②在Quip，我们立志于打造出新一代的生产力工具，它能让每一家公司的每一个人在每一天使用起来都非常享受。</p>
+<p>当你同时兼备一支小团队和壮志凌云的目标，惟一一个能成就伟业的方法就是专心在那些能带来巨大影响力的事情上——它们能为你的时间投资带来丰厚的回报。</p>
+<p>目前为止在Quip里，这样把资源集中以小搏大的项目最后都如愿以偿。我们已经能够签下越来越多喜欢这款产品的客户，包括Facebook，Pinterest，Stripe, Instacart, Product Hunt, New Relic,以及许多其他家喻户晓的名字。我们的产品线全面覆盖了8个不同的平台（web, Mac, Windows, iPhone, iPad, Android phones, Android tablets, 以及Apple Watch）。而这一切，全靠我们13位工程师（包括两位联合创始人）。（大魔王：8个平台，13位工程师，实在是太厉害了。）</p>
+<p>我们的征途依然是星辰大海，不过我在这里给出一些准则和方法，它们为我们这个小团队滚出了巨大的雪球。</p>
+<p>##1. Build once, use multiple times<br>    只造一次，随处可用</p>
+<p>无论你在写软件的任何时候，优秀的抽象编程总是至关重要的，能横跨不同平台的抽象编程对我们这个小团队尤为宝贵。假如我们不得不分别在8个不同平台上从头开始构建产品，我们就不可能走到今天这么远。所以我们在库和体系架构方面投入了大量的精力，来确保我们只用造一次轮子就能在多个平台使用。</p>
+<p>举个例子，我们在数据存储、内存数据结构以及跨平台通讯上广泛地使用 Protocol Buffers（译者注：谷歌开发的一种可扩展的结构化数据存储格式）。这让我们能够便捷地完成很多事情，比如直接从MySQL读取Protocol Buffers③；在Python 网页服务器上修改数据；然后把它们发送给我们的native clients（译者注：谷歌开发的一种可以让浏览器直接运行机器码的沙盒技术），这些native clients上使用的数种语言包括C++, Objective C, Java或者C#；甚至还可以把那些相同的数据结构下载到我们的JavaScript编辑器。此外，所有这些操作都是通过自动生成的数据串行化代码完成的，有着强类型数据结构的它们同时运行在强类型的通讯渠道上。假如我们使用的特定语言专用的数据结构或者甚至是JSON，通过如此繁杂的步骤来处理数据不仅将会变得非常乏味，而且也会容易出错。</p>
+<p>“只造一次，随处可用”的精神在其他许多场合也出现过。为了在桌面版、移动端上同步数据以及支持离线使用，我们使用了相同的C++库。横跨所有设备的文档编辑器都运行在相同的JavaScript库上——然后再针对各自平台进行优化，让用户体验变得更加流畅完美。我们的网页版，Mac和Windows桌面应用都是共用了同一套React的UI代码，使其在各自平台上都更接近于原生应用。④</p>
+<p>使用这些技术并不能一劳永逸地解决所有挑战，但是它们确实大大减轻了工作量。</p>
+<p>##2. Take advantage of in-network referrals for hiring<br>    在招聘上利用好人际网络的引荐</p>
+<p>在我有幸共事过的团队中，Quip有着最聪明的那撮人。在开发方面，团队里的绝大部分人拥有至少6年的从业经验，甚至超过一半工程师的经验超过10年。</p>
+<p>对于初创企业来说，掌握如此丰富的从业经验弥足珍贵：我们能靠一己之力去解决遇到的困难，我们相信每一个人都在做正确的东西。与有着更多初级工程师的团队相比，我们并不需要花太多的时间去培养新员工。显然，我们同时也可以避免早期职业生涯已经犯过的错误，这样可以显著提高数倍A/B测试框架或者监视系统的效率。从业经验让我们在解决产品挑战方面更加游刃有余。</p>
+<p>为了组建这样的团队，我们很好地利用了人际网络的引荐。许多Quip工程师在加入前就曾经共事过，这样就减少了招聘过程中的风险和麻烦。即使你的职业生涯刚起步，与你喜欢共事的朋友保持联系也是很重要的。来日方长，也许你能找到不错的机会重新在一起工作。</p>
+<p>##3. Invest heavily in tooling<br>    在工具化上投入大量精力</p>
+<p>小魔王插播：Facebook早年和现在一直就在 internal tools 组里投入了特别厉害的工程师来开发内部的各种工具。比如我们的任务管理工具 task，代码审核和查看工具 phabricator，以及后来的各种基础设施、数据分析和统计工具，比如：Heystack，Scribe，PTail。而即使现在名声大噪的 Kafka，之前也只是LinkedIn的一个内部基础设施项目。但是国内公司我经常发现工程师们对于做工具或者做内部设施没啥兴趣，只喜欢做看得见摸得着的界面或者功能，殊不知这些界面和功能都是PM和设计还有老板们说的算，技术含量也并不高。</p>
+<p>工具链能让你的回报加倍。随着时间的积累，它们的益处也会越来越明显。在Quip，我们造了大量工具来帮助我们更快地进行开发：比如能够使用堆栈跟踪来收集统计错误的表盘；比如能用来调试错误和检查状态的工具；比如能分析代码和查出一般错误的git commit hooks；以及其他许多自动化脚本来执行各种枯燥无味的任务。我们实现了从性能指标到客户留存率的数据可视化，这样我们就能更清楚地明白目前的进展。我们为自己的售后部门和业务部门开发了内部专用的工具，这样他们就能帮助客户快速地处理任何问题。</p>
+<p>专注于工具化同时也节约了我们的运营开销。持续不断的内部整合让我们的公司保持在健康状态，部署自动化脚本简化了我们的发布流程。精细化的（程序）警报大大减轻了工作压力，比如这些警报只会在工作时间推送给随叫随到的工程师。最终的结果是，与我所工作过的其他创业公司相比，Quip分配的寻呼机几乎形同虚设——过去的一年时间里我只有两三次是在半夜里收到警报推送的。所有在工具化上的投入让我们能把更多的时间分配给开发新功能，而不只是花在维护上。</p>
+<p>##4. Put more wood behind fewer arrows<br>    有的放矢</p>
+<p>我们列出了无数乐于去开发的功能和改进，但时间和资源都是有限的。所以我们应该把精力集中在关键的里程碑（事物）上，同时主动地为功能和bug进行优先级排序也很重要,这样我们的战线就不会拉得太长。任务切换的开销非常大，我们选择不做什么跟选择做什么是同等重要的。</p>
+<p>在这方面，用户的反馈无论是数量上还是质量上都尤为宝贵。对于A/B测试来说，我们会努力地把所有想法分解成为可以进行测试论证的假设，这样我们就能进行评估以少走弯路。在功能层面，我们可以先开发出一个最小可用产品，然后进行用户测试来收集所有原始反馈，以此来了解客户不明白的地方，以及是哪方面起了作用。或者有时候我们可以为少数客户推出一项新功能，然后通过与他们紧密地联系合作，了解他们喜欢什么，讨厌什么。</p>
+<p>比方说当发布Mac版和Windows版的应用时，我们是在不同阶段将它们推送给员工、alpha测试者和beta测试者的（基于他们想成为早期试用者的意愿值，以及对bug的容忍度）。他们的反馈（当然是利用Quip）帮助我们把精力集中在桌面应用用户最关心的功能上面。我们可以把其他功能稍作推迟。</p>
+<p>##5. Reduce the friction of communication<br>    减少沟通上的摩擦</p>
+<p>对于开发团队来说，电子邮件和会议可以说是精力的两大黑洞 （大魔王：注意！）。所以在Quip，我们普遍都很排斥它们。除了进行 Code review 以及发布几种主要类型的警报，我们在内部并不通过电子邮件进行技术沟通。在平常的每个星期，工程师只有一个小时的计划内开会时间：30分钟的全员会议是我们分享各自进展以及展示Demo的场合，在这之后也许会有若干小项目的内部会议，或者一对一的单独沟通。必要时我们会专门开有针对性的会。</p>
+<p>我们之间大部分的沟通交流理所当然是通过Quip。这款产品是我们如何在公司里进行协作的法宝，我们每天都通过它完成任何事。我们使用Quip来设计文档，列任务清单，给客户提供支持，还有聊天。我们还为Pager Duty, Zendesk, Twitter, Jenkins, Stripe, Crashlytics, Github以及很多公司内置了 integrations 功能，这样一旦有任何事情发生，他们整个团队讨论起来就方便多了。如果有一位用户在推特上报告了一个bug并@了QuipSupport，那么在Quip内浏览推特聊天频道的任何一个人都可以直接@一位工程师然后问他是否已知晓这个bug。如果客户成功部门（Customer Success）或者某位销售员想要转达来自客户的功能需求，她可以把它加在反馈文件或者待办事项中，相关负责人会立即介入，并为此项工作列出优先级别。我们甚至有一份和本地三明治&amp;沙拉餐厅共享的文档，我们只要输入午餐菜单，棒棒的外卖小哥每天中午就会把它们送到办公室。</p>
+<p>纵观一个团队的成长进程，沟通通常是第一个碰上的大麻烦，任何能减少沟通摩擦的工具——无论它是Quip, Slack或者其他东西——都可以显著地提高团队的工作效率。把Quip整合到团队的工作流中让我们得以通力合作，这是传统如电子邮件和会议的沟通方式不可能达到的效果。同时它也帮助公司建立起公开透明的文化，因为邮件里的信息会在一部分收件人手里沉默。相比之下，Quip 的文档正逐渐成为团队里每一位成员愈发丰富的知识宝库。每一份文档的留言和讨论都有据可查，我们所有人都在同一页上。</p>
+<p>我们如今已经取得了很多进步，但前方漫漫长路依然充满挑战。假如你对在Quip工作很感兴趣，不妨移步到我们的招聘页面。假如你想要学习更多的具有可操作性以及经证实的方法策略来成为一名高效工程师，不妨看一下我的这本书，《The Effective Engineer》。<br>这篇文章基于我在Quora上最开始写的一个答案，Slate也有转载。<br>①除了雄心壮志，Quora和Quip在许多方面都有共同点。它们都是由前Facebook CTO创立的，都从Benchmark风投拿到了A轮融资，当然，也都是从Qu起步的。<br>②我们的使命，来自Quora博客。<br>③我们的MySQL数据存储使用了一种类似于FriendFeed的非模式化MySQL设计，不同的是，我们并不使用Python对象序列化方法，而是采用了Protocol Buffers。<br>④Bret Taylor（译者注：Quip的创始人，前Facebook CTO）写过一篇更加鞭辟入里的技术文章，其详细描述了我们（在产品中）共同的C++库和React架构：React with C++: Building the Quip Mac and Windows Apps.</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong>]]>
+    
+    </summary>
+    
+      <category term="创业故事" scheme="http://yoursite.com/tags/%E5%88%9B%E4%B8%9A%E6%95%85%E4%BA%8B/"/>
+    
+      <category term="英文科技文章翻译" scheme="http://yoursite.com/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="原创英文翻译" scheme="http://yoursite.com/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[缔造Instagram的这五年]]></title>
+    <link href="http://yoursite.com/2015/10/29/instagram/"/>
+    <id>http://yoursite.com/2015/10/29/instagram/</id>
+    <published>2015-10-29T01:52:28.000Z</published>
+    <updated>2015-12-01T12:12:33.801Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
+</blockquote>
+<hr>
+<p>　　2010年，在我们发布Instagram第一个版本的前一晚，我与联合创始人Kevin打赌，第一天大概会有多少人下载这款app。Kevin猜有2500人，我当时特别乐观，赌了把大的，押25000人。第二天，我简直不敢相信我的猜测分毫不差。<br>　　今天，在Instagram的五周岁之际，我们拥有来自世界各地的4亿用户，他们每天上传8000万份相片和视频。回望过去，我们在初代产品上就做到了在简洁和精巧中取得恰到好处的平衡，同时就在去年，我们回炉重造了「搜索&amp;发现」（Search &amp; Explore）功能，发布了全新的私密分享功能「Instagram Direct」，如「Layout」这样的创意拼图工具也应运而生。<br>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。</p>
+<h2 id="里程碑_#1：头三个月解锁1百万用户成就">里程碑 #1：头三个月解锁1百万用户成就</h2><h3 id="归档：最大的挑战">归档：最大的挑战</h3><p>　　上线第一个月的惨状不忍直视——经常凌晨3点睡眼惺忪打开屏幕，上面的服务器警信息接踵而至。自第一天爆炸性地吸引了25000名用户后，数量就持续高速增长直至解锁1百万成就。<br>　　请脑补一下这个场面：争先恐后的人们迫切想要使用你的产品！世上没有任何号角能比这更能激励士气的了，所以我们开启996模式以确保我们可以承受住与日俱增的访问请求。我们起步的时候只用了一台位于洛杉矶的服务器，其性能还不如一台Macbook Pro。当我打电话给主机服务商，要求根据我们第一天的增长情况再添置一台服务器时，他们回复说需要4天的周转期，快马加鞭的话也得要48个小时。鉴于我们的增长态势看起来深不可测，我们决定转移到亚马逊的AWS云服务器上面去。<br>　　由于我们两个都缺乏系统底层架构的经验，我们只能尽所能地狼吞虎咽相关的知识。在<a href="http://www.infoq.com/presentations/" target="_blank" rel="external">QCon</a>和<a href="https://www.youtube.com/user/OreillyMedia" target="_blank" rel="external">Velocity</a>的上面有非常棒的会议视频，还有来自 Facebook, Netflix, Twitter以及其他公司的文章。共享技术知识的开源文化是我们这一行最棒的事情之一了，它也是我们更新维护日志的主要推动力。</p>
+<p>　　干货总结：我们的信条，“简单的事情先做”脱胎于最初的岁月。因为只有我们两个人并肩作战，所以每当我们面临新的挑战时，我们不得不采用最快的、最简单的解决办法。假如我们以完美的态度要求每一件事情，那我们很有可能在无所作为中灭亡。通过找出最先需要解决的问题，以及选择最简单的解决办法，我们才有能力支撑起我们的指数型增长。</p>
+<h2 id="里程碑_#2：发布安卓版Instagram">里程碑 #2：发布安卓版Instagram</h2><h3 id="归档：最众望所归的发布">归档：最众望所归的发布</h3><p>　　在Instagram发布的头几年里，Kevin和我每一次在台上都会被问到同一个问题，“安卓版的应用到底什么时候才会出来？！”<br>　　我们从iOS版起家——仅仅是因为我们想要在我们的产品上做到快速迭代——毕竟我们只有两个工程师。当跨入2012年后，是时候扩展到其他不同的平台了。我们的安卓版app也是典型的Instagram风格，以Philip领衔的三位工程师在三个月内做出来了，其中两位的安卓开发还是现学现卖的。Philip是在我们开发另一款软件Gowalla的安卓版app时加入的，直到今天他依然领导着Instagram的移动化。<br>　　因为我们想要在尽可能多的安卓手机上测试我们的app，甚至包括华为的一款冷门手机“M865 Ascend II 2 Touch”，所以有时候我化身为“eBay皇冠买家”。大多数时候，新手机的屁股还没在办公桌上坐热，我们就立即拆掉快递盒装上我们的半成品app试运行，然后为app的运行效果赞不绝口。安卓设备的产品线之广以至于我们面临了一些挑战——特别是当我们开发Instagram的视频功能时——但最终安卓版app做到了稳定运行在如此之多的手机上而不怎么需要针对某些机型做特殊修改，不得不说太给力了。<br>　　<br><img src="http://ww4.sinaimg.cn/large/6ccda21fjw1ex67ey3yilj210m0l4dkh.jpg" alt="HTC"></p>
+<p>　　安卓版上线刚12个小时，用户量就突破了100万——反响之热切真是太不可思议了。也就在那个时候，我写了几篇关于系统底层架构设计的文章。斗转星移，Instagram的安卓版使用起来更像是原生软件了，如今它也成为了流畅度、评分最高的安卓应用之一。<br>　　<br>　　干货总结：从单一平台上起步允许我们沉下心来快速迭代，并且没有兼容性的负担（我们在Instagram内部经常说“做事要少而精”）。当扩展到多个平台的时候，我们成立了一只全新的、以拥有深厚安卓开发功力的天才工程师为首的小队伍。斗转参横，羽翼渐丰的安卓开发团队将让我们的应用更接近原生。</p>
+<p><img src="http://ww2.sinaimg.cn/large/6ccda21fjw1ex67g4lh3aj20du0p4mz5.jpg" alt="NBA"></p>
+<h2 id="里程碑_#3_2012维吉尼亚风暴">里程碑 #3 2012维吉尼亚风暴</h2><h3 id="归档：最严重的突发状况">归档：最严重的突发状况</h3><p>　　2012年中的某个周末，我正在波兰渡假，这时手机嗡嗡响起来：“Instagram.com宕机了。”我火速上网做了测试，发现不只是Instagram——Netflix以及其他网站都纷纷躺枪了。我赶回酒店打开笔记本，AWS云服务器状态页上一条可怕的消息赫然在目：“美国东部的电力供应中断了”。一场巨大的风暴从维吉尼亚州呼啸而过，并且卷走了我们大半服务器的电力。接下来的36个小时俨然成为一场重建几乎整个底层系统的攻坚战。乌云背后唯一的幸福线就是这催生出一张病毒式传播的图片：</p>
+<p><img src="http://ww1.sinaimg.cn/large/6ccda21fjw1ex6bhyzzvsj20dc09pq3o.jpg" alt="DOWN"></p>
+<p>　　在那个时候，我们整个后端技术团队由我自己，我们第一个工程师Shayne以及Rick组成，Rick加入Instagram还不到一个月的时间。所幸没有任何用户数据丢失，但是这次意外暴露出我们在系统底层架构自动化上还有许多坑亟待填补。<br>　　这次意外给我们脸上来了一记响亮的耳刮子，我们需要找到一种可以重复使用的服务器配置方法。次年，我们把不稳定的shell脚本迁移到了全Chef系统，这也大幅降低了新团队成员上手底层架构的门槛。<br>　　与此同时，我们不再依赖亚马逊的持久性数据块级存储卷方案（Elastic Block Storage），取而代之的是<a href="https://github.com/wal-e/wal-e" target="_blank" rel="external">WAL-E</a>以及Postgres家的WAL shipping replication方案。我们也建造了一个可靠的交叉数据中心，这让Instagram的数据得以分布式地存储到不同的地理位置。</p>
+<p>　　干货总结：架设自动化脚本的底层架构需要大量的前期工作，不过这可是一本万利，新工程师将能很快融入项目本身，另外这样做也能在突发状况中立功。另外，我很高兴我们雇佣了点对技能点的工程师——当我们面前摆着这样一个惨不忍睹的烂摊子时，Shayne和Rick都撸起他们的袖子立马开始收拾，遇到这种意外，堪比《火星救援》。</p>
+<h2 id="里程碑_#4：服务器迁移——Instagration">里程碑 #4：服务器迁移——Instagration</h2><h3 id="归档：最壮志凌云的工程">归档：最壮志凌云的工程</h3><p>2010年10月5日：0用户<br>2010年10月6日：25000用户<br>2010年11月：1百万用户<br>2012：3千万用户<br>2013：2亿用户</p>
+<p>　　在2013年的时候我们拥有2亿活跃用户，超过200亿张相片存储在服务器上。整个团队虽然在扩张，但规模仍然较小，所有人对于Instagram社区的持续成长感到欣喜万分。<br>　　与此同时，我们想要跟Facebook已有的后台系统进行整合——举个例子，他们的Site Integrity系统对帮助我们抵抗垃圾邮件的侵扰至关重要。但在亚马逊AWS云服务器上做这些整合会非常困难，而我们拖得越久，那迁移越来越庞大的底层系统将日益艰巨。<br>　　我们迁移去Facebook的后台系统是板上钉钉的事了，但我们想在不中断运营的情况下迁移数以百万计的用户和数以亿计的相片。所以我们开始了Instagration工程，或者我更喜欢将其描述为为给一辆时度100迈的汽车改头换面。一支由8个来自Instagram和Facebook的工程师组成的小队先建起一个共有网络，然后使用自家建造的叫Neti的工具把Instagram从EC2迁移到亚马逊的虚拟私有云  (Virtual Private Cloud)上。接下来迁移我们的系统和工具，其中包括使用一个“ig”的命令行工具，以此在新的FB数据中心搭建类似AWS的开发环境。最终我们花了最小的代价完成了这次大规模迁移。</p>
+<p>　　干货总结：不要重复造轮子。通过迁移到Facebook的服务器，我们的后台系统运行得更快、更有效率，同时也能利用Facebook其他比如反垃圾邮件这样的工具。利用Facebook的资源和经验，我们的尖刀排不需要扩招变得臃肿，从而使行动更风驰电掣。</p>
+<h2 id="里程碑_#5：Instagram的「趋势」">里程碑 #5：Instagram的「趋势」</h2><h3 id="归档：下一个大赌注">归档：下一个大赌注</h3><p>　　今年早些时候，我们对「搜索&amp;发现」（Search &amp; Explore）这个功能进行了完善，使得人们在Instagram上能更方便找到世界上每个角落发生的有趣事情。我们引进了「热门标签和地点」，并且搭建了用于甄别以及排序筛选的全新的机制，来给用户推荐Instagram上的精华。<br>　　我们第一次对「趋势」的尝试始于2010年发布Instagram，当时采用的是「流行」（Popular）页面。整个算法十分简单：计算每张相片的点赞数，每4小时清零。当我们的社区规模还是比较小的时候，这个算法非常好用。但随着时间推移，我们意识到我们需要一个更细致入微的算法。<br>　　鉴于社区规模之庞大，我们在2014年致力于个性化「发现」（Explore ）功能，其所展示的是针对每一个用户兴趣胃口生成的、可无限下拉查看的相片和视频。与非量身定做的「发现」相比，我们的用户在短短数个月内与内容互动的比例提高了5倍。今年，我们带着最初做「流行」（Popular）页面的理念重新登场，并将其升级为「趋势」——其能快速一览整个Instagram上面的内容。随着排序和机器学习专家的陆续加入，我们越来越有能力基于复杂算法生成出更加个性化的「趋势」。</p>
+<p>　　干货总结：简单的事情先做并不意味着你的解决办法能一劳永逸。我们已经学会对产品的演化进步保持开放的心态，有针对性地建立队伍——比如我们的数据科学队伍，以此应对快速扩张的Instagram社区。</p>
+<p>　　过去的五年对于我们中间很多人来说是一次激动人心的狂野之旅。在Instagram 5周岁生日之际，停下来回顾反思是极好的。我很确信我们的社区会持续成长，我们的产品也会更上一层楼，在Medium上从来就不缺“回顾我过去十年”这样的文章。让我们为下一个五年干杯！</p>
+<p>扩展阅读：<a href="https://www.quora.com/What-is-the-genesis-of-Instagram" target="_blank" rel="external">https://www.quora.com/What-is-the-genesis-of-Instagram</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong>]]>
+    
+    </summary>
+    
+      <category term="英文科技文章翻译" scheme="http://yoursite.com/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="原创英文翻译" scheme="http://yoursite.com/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[「钢铁侠现实版」Elon Musk - 地球上最炫酷的人]]></title>
