@@ -2,23 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/2015/08/23/elon%20musk/</loc>
-    <lastmod>2016-02-12T20:58:33.321Z</lastmod>
-  </url>
-  
-  <url>
     <loc>http://yoursite.com/2015/12/01/qiup/</loc>
-    <lastmod>2016-02-07T18:38:08.308Z</lastmod>
+    <lastmod>2016-02-12T21:33:09.888Z</lastmod>
   </url>
   
   <url>
     <loc>http://yoursite.com/2015/10/29/instagram/</loc>
-    <lastmod>2015-12-01T12:12:33.801Z</lastmod>
+    <lastmod>2016-02-12T21:28:37.032Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2015/08/23/elon%20musk/</loc>
+    <lastmod>2016-02-12T21:25:29.734Z</lastmod>
   </url>
   
   <url>
     <loc>http://yoursite.com/about/index.html</loc>
     <lastmod>2015-10-29T08:01:45.526Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/categories/index.html</loc>
+    <lastmod>2015-10-29T07:22:24.431Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/tags/index.html</loc>
+    <lastmod>2015-10-29T07:22:01.585Z</lastmod>
   </url>
   
 </urlset>

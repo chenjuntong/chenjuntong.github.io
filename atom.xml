@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[　陈钧桐的记忆宫殿]]></title>
-  <subtitle><![CDATA[　　　　　　　　我思故我在]]></subtitle>
+  <title><![CDATA[陈钧桐的记忆宫殿]]></title>
+  <subtitle><![CDATA[我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-07T18:38:08.308Z</updated>
+  <updated>2016-02-12T21:33:09.888Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,10 +19,9 @@
     <link href="http://yoursite.com/2015/12/01/qiup/"/>
     <id>http://yoursite.com/2015/12/01/qiup/</id>
     <published>2015-12-01T11:51:02.000Z</published>
-    <updated>2016-02-07T18:38:08.308Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
-</blockquote>
+    <updated>2016-02-12T21:33:09.888Z</updated>
+    <content type="html"><![CDATA[<p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？<br>我们已经能够签下越来越多喜欢这款产品的客户，包括Facebook，Pinterest，Stripe，Instacart，Product Hunt，New Relic，以及其他许多家喻户晓的名字。我们的产品线全面覆盖了8个不同的平台（web，Mac，Windows， iPhone，iPad，Android phones，Android tablets，以及Apple Watch）。而这一切，全靠我们13位工程师（包括两位联合创始人）。<a id="more"></a></p>
+<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？</p>
 <p>自从在Quora工作以来（以及最近在Quip的这些年），我一直在努力地思考这个问题。我是在Quora和Quip分别只有12人和13人的时候加入的。这两家初创企业都有雄心勃勃的使命。① Quora致力于分享和增长全世界的知识，同时建造一座互联网上的“亚历山大图书馆”。②在Quip，我们立志于打造出新一代的生产力工具，它能让每一家公司的每一个人在每一天使用起来都非常享受。</p>
@@ -45,11 +44,11 @@
 <h2 id="5-_Reduce_the_friction_of_communication">5. Reduce the friction of communication</h2><h3 id="减少沟通上的摩擦">减少沟通上的摩擦</h3><p>对于开发团队来说，电子邮件和会议可以说是精力的两大黑洞 （大魔王：注意！）。所以在Quip，我们普遍都很排斥它们。除了进行 code review 以及发布几种主要类型的警报，我们在内部并不通过电子邮件进行技术沟通。在平常的每个星期，工程师只用开一个小时的例会：30分钟的全员会议是我们分享各自进展以及展示Demo的场合，在这之后也许会有若干小项目的内部会议，或者一对一的单独沟通。必要时我们会专门开有针对性的会。</p>
 <p>我们之间大部分的沟通交流理所当然是通过Quip。这款产品是我们如何在公司里进行协作的法宝，我们每天都通过它完成任何事。我们使用Quip来设计文档，列任务清单，给客户提供支持，还有聊天。我们还为Pager Duty，Zendesk，Twitter，Jenkins，Stripe，Crashlytics，Github以及很多公司内置了 integrations 功能，这样一旦有任何事情发生，他们整个团队讨论起来就方便多了。如果有一位用户在推特上报告了一个bug并@了QuipSupport，那么在Quip内浏览推特聊天频道的任何一个人都可以直接@一位工程师然后问他是否已知晓这个bug。如果客户成功部门（Customer Success）或者某位销售员想要转达来自客户的功能需求，她可以把它加在反馈文件或者待办事项中，相关负责人会立即介入，并为此项工作列出优先级别。我们甚至有一份和本地三明治&amp;沙拉餐厅共享的文档，我们只要输入午餐菜单，棒棒的外卖小哥每天中午就会把它们送到办公室。</p>
 <p>纵观一个团队的成长进程，沟通通常是第一个碰上的大麻烦，任何能减少沟通摩擦的工具——无论它是Quip，Slack或者其他东西——都可以显著地提高团队的工作效率。把Quip整合到团队的工作流中让我们得以通力合作，这是传统如电子邮件和会议的沟通方式不可能达到的效果。同时它也帮助公司建立起公开透明的文化，因为邮件里的信息会在一部分收件人手里沉默。相比之下，Quip 的文档正逐渐成为团队里每一位成员愈发丰富的知识宝库。每一份文档的留言和讨论都有据可查，我们所有人都在同一页上。</p>
-<p>我们如今已经取得了很多进步，但前方漫漫长路依然充满挑战。假如你对在Quip工作很感兴趣，不妨移步到我们的招聘页面。假如你想要学习更多的具有可操作性以及经证实的方法策略来成为一名高效工程师，不妨看一下我的这本书，《The Effective Engineer》。<br>这篇文章基于我在Quora上最开始写的一个答案，Slate也有转载。<br>①除了雄心壮志，Quora和Quip在许多方面都有共同点。它们都是由前Facebook CTO创立的，都从Benchmark风投拿到了A轮融资，当然，也都是从Qu起步的。<br>②我们的使命，来自Quora博客。<br>③我们的MySQL数据存储使用了一种类似于FriendFeed的非模式化MySQL设计，不同的是，我们并不使用Python对象序列化方法，而是采用了Protocol Buffers。<br>④Bret Taylor（译者注：Quip的创始人，前Facebook CTO）写过一篇更加鞭辟入里的技术文章，其详细描述了我们（在产品中）共同的C++库和React架构：React with C++: Building the Quip Mac and Windows Apps.</p>
+<p>我们如今已经取得了很多进步，但前方漫漫长路依然充满挑战。假如你对在Quip工作很感兴趣，不妨移步到我们的招聘页面。假如你想要学习更多的具有可操作性以及经证实的方法策略来成为一名高效工程师，不妨看一下我的这本书，《The Effective Engineer》。</p>
+<p>这篇文章基于我在Quora上最开始写的一个答案，Slate也有转载。<br>①除了雄心壮志，Quora和Quip在许多方面都有共同点。它们都是由前Facebook CTO创立的，都从Benchmark风投拿到了A轮融资，当然，也都是从Qu起步的。<br>②我们的使命，来自Quora博客。<br>③我们的MySQL数据存储使用了一种类似于FriendFeed的非模式化MySQL设计，不同的是，我们并不使用Python对象序列化方法，而是采用了Protocol Buffers。<br>④Bret Taylor（译者注：Quip的创始人，前Facebook CTO）写过一篇更加鞭辟入里的技术文章，其详细描述了我们（在产品中）共同的C++库和React架构：React with C++: Building the Quip Mac and Windows Apps.</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong>]]>
+    <![CDATA[<p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？<br>我们已经能够签下越来越多喜欢这款产品的客户，包括Facebook，Pinterest，Stripe，Instacart，Product Hunt，New Relic，以及其他许多家喻户晓的名字。我们的产品线全面覆盖了8个不同的平台（web，Mac，Windows， iPhone，iPad，Android phones，Android tablets，以及Apple Watch）。而这一切，全靠我们13位工程师（包括两位联合创始人）。]]>
     
     </summary>
     
@@ -66,10 +65,10 @@
     <link href="http://yoursite.com/2015/10/29/instagram/"/>
     <id>http://yoursite.com/2015/10/29/instagram/</id>
     <published>2015-10-29T01:52:28.000Z</published>
-    <updated>2015-12-01T12:12:33.801Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong><a id="more"></a></p>
-</blockquote>
+    <updated>2016-02-12T21:28:37.032Z</updated>
+    <content type="html"><![CDATA[<p>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。<a id="more"></a></p>
+<hr>
+<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>　　2010年，在我们发布Instagram第一个版本的前一晚，我与联合创始人Kevin打赌，第一天大概会有多少人下载这款app。Kevin猜有2500人，我当时特别乐观，赌了把大的，押25000人。第二天，我简直不敢相信我的猜测分毫不差。<br>　　今天，在Instagram的五周岁之际，我们拥有来自世界各地的4亿用户，他们每天上传8000万份相片和视频。回望过去，我们在初代产品上就做到了在简洁和精巧中取得恰到好处的平衡，同时就在去年，我们回炉重造了「搜索&amp;发现」（Search &amp; Explore）功能，发布了全新的私密分享功能「Instagram Direct」，如「Layout」这样的创意拼图工具也应运而生。<br>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。</p>
 <h2 id="里程碑_#1：头三个月解锁1百万用户成就">里程碑 #1：头三个月解锁1百万用户成就</h2><h3 id="归档：最大的挑战">归档：最大的挑战</h3><p>　　上线第一个月的惨状不忍直视——经常凌晨3点睡眼惺忪打开屏幕，上面的服务器警信息接踵而至。自第一天爆炸性地吸引了25000名用户后，数量就持续高速增长直至解锁1百万成就。<br>　　请脑补一下这个场面：争先恐后的人们迫切想要使用你的产品！世上没有任何号角能比这更能激励士气的了，所以我们开启996模式以确保我们可以承受住与日俱增的访问请求。我们起步的时候只用了一台位于洛杉矶的服务器，其性能还不如一台Macbook Pro。当我打电话给主机服务商，要求根据我们第一天的增长情况再添置一台服务器时，他们回复说需要4天的周转期，快马加鞭的话也得要48个小时。鉴于我们的增长态势看起来深不可测，我们决定转移到亚马逊的AWS云服务器上面去。<br>　　由于我们两个都缺乏系统底层架构的经验，我们只能尽所能地狼吞虎咽相关的知识。在<a href="http://www.infoq.com/presentations/" target="_blank" rel="external">QCon</a>和<a href="https://www.youtube.com/user/OreillyMedia" target="_blank" rel="external">Velocity</a>的上面有非常棒的会议视频，还有来自 Facebook, Netflix, Twitter以及其他公司的文章。共享技术知识的开源文化是我们这一行最棒的事情之一了，它也是我们更新维护日志的主要推动力。</p>
@@ -90,8 +89,7 @@
 <p>扩展阅读：<a href="https://www.quora.com/What-is-the-genesis-of-Instagram" target="_blank" rel="external">https://www.quora.com/What-is-the-genesis-of-Instagram</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong>]]>
+    <![CDATA[<p>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。]]>
     
     </summary>
     
@@ -106,10 +104,9 @@
     <link href="http://yoursite.com/2015/08/23/elon%20musk/"/>
     <id>http://yoursite.com/2015/08/23/elon musk/</id>
     <published>2015-08-23T08:17:38.000Z</published>
-    <updated>2016-02-12T20:58:33.321Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>我将通过这篇文章去探索揭秘身他是如何白手起家成为亿万富翁和现实中的Tony Stark（译者注：钢铁侠在电影中的名字）。不过现在，还是引用传奇亿万富翁Richard Branson的一小段话来为这场好戏拉开序幕吧：<br>　　<em>不管外界质疑声是多么地此起彼伏，Elon总能如有神助般地把废铜烂铁变为如意金箍，借定海神针平息一切。回想一下在20世纪90年代的时候，我们会把自己的信用卡号码给素不相识的陌生人吗？然而Elon创造了一个叫PayPal的小玩意儿，结局今天你们也都知道了。他的特斯拉汽车和SolarCity公司正在把能源可再生的纤尘不染的未来天堂挪到地上……他的SpaceX正在重新探索太空……矛盾的是，一方面Elon在努力改善我们所居住的地球，另一方面他又为了帮助我们离开地球而在建造太空飞船。</em><a id="more"></a></p>
-</blockquote>
+    <updated>2016-02-12T21:25:29.734Z</updated>
+    <content type="html"><![CDATA[<p>我将通过这篇文章去探索揭秘身他是如何白手起家成为亿万富翁和现实中的Tony Stark（译者注：钢铁侠在电影中的名字）。不过现在，还是引用传奇亿万富翁Richard Branson的一小段话来为这场好戏拉开序幕吧：<br>　　<em>不管外界质疑声是多么地此起彼伏，Elon总能如有神助般地把废铜烂铁变为如意金箍，借定海神针平息一切。回想一下在20世纪90年代的时候，我们会把自己的信用卡号码给素不相识的陌生人吗？然而Elon创造了一个叫PayPal的小玩意儿，结局今天你们也都知道了。他的特斯拉汽车和SolarCity公司正在把能源可再生的纤尘不染的未来天堂挪到地上……他的SpaceX正在重新探索太空……矛盾的是，一方面Elon在努力改善我们所居住的地球，另一方面他又为了帮助我们离开地球而在建造太空飞船。</em><a id="more"></a></p>
+<hr>
 <p><i class="icon-paste"></i> 原文地址：<a href="http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html" target="_blank" rel="external">Elon Musk: The World’s Raddest Man</a><br><i class="icon-pencil"></i> <strong><em>作者：Tim Urban</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>　　上个月，我接到一个让我虎躯一震的电话。<br><img src="http://ww3.sinaimg.cn/large/6ccda21fgw1eu3frc7dnfj20ul0oxdgt.jpg" alt="Call1"></p>
@@ -184,8 +181,7 @@
 　　</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<blockquote>
-<p>我将通过这篇文章去探索揭秘身他是如何白手起家成为亿万富翁和现实中的Tony Stark（译者注：钢铁侠在电影中的名字）。不过现在，还是引用传奇亿万富翁Richard Branson的一小段话来为这场好戏拉开序幕吧：<br>　　<em>不管外界质疑声是多么地此起彼伏，Elon总能如有神助般地把废铜烂铁变为如意金箍，借定海神针平息一切。回想一下在20世纪90年代的时候，我们会把自己的信用卡号码给素不相识的陌生人吗？然而Elon创造了一个叫PayPal的小玩意儿，结局今天你们也都知道了。他的特斯拉汽车和SolarCity公司正在把能源可再生的纤尘不染的未来天堂挪到地上……他的SpaceX正在重新探索太空……矛盾的是，一方面Elon在努力改善我们所居住的地球，另一方面他又为了帮助我们离开地球而在建造太空飞船。</em>]]>
+    <![CDATA[<p>我将通过这篇文章去探索揭秘身他是如何白手起家成为亿万富翁和现实中的Tony Stark（译者注：钢铁侠在电影中的名字）。不过现在，还是引用传奇亿万富翁Richard Branson的一小段话来为这场好戏拉开序幕吧：<br>　　<em>不管外界质疑声是多么地此起彼伏，Elon总能如有神助般地把废铜烂铁变为如意金箍，借定海神针平息一切。回想一下在20世纪90年代的时候，我们会把自己的信用卡号码给素不相识的陌生人吗？然而Elon创造了一个叫PayPal的小玩意儿，结局今天你们也都知道了。他的特斯拉汽车和SolarCity公司正在把能源可再生的纤尘不染的未来天堂挪到地上……他的SpaceX正在重新探索太空……矛盾的是，一方面Elon在努力改善我们所居住的地球，另一方面他又为了帮助我们离开地球而在建造太空飞船。</em>]]>
     
     </summary>
     
