@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://yoursite.com/"/>
-  <updated>2016-02-15T05:23:46.777Z</updated>
+  <updated>2016-02-15T05:30:48.776Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -19,12 +19,13 @@
     <link href="http://yoursite.com/2016/02/15/jituan/"/>
     <id>http://yoursite.com/2016/02/15/jituan/</id>
     <published>2016-02-15T05:17:09.000Z</published>
-    <updated>2016-02-15T05:23:46.777Z</updated>
+    <updated>2016-02-15T05:30:48.776Z</updated>
     <content type="html"><![CDATA[<p><img src="http://7xqwuf.com1.z0.glb.clouddn.com/imega%2Fjpg%2Fjituan.jpg" alt="jituan"></p>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" starttime="00:20" src="http://music.163.com/outchain/player?type=2&id=34922419&auto=1&height=66"></iframe>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><img src="http://7xqwuf.com1.z0.glb.clouddn.com/imega%2Fjpg%2Fjituan.jpg" alt="jituan"></p>
-]]>
+<iframe frameborder="no" border="0" marginwid]]>
     </summary>
     
   </entry>
