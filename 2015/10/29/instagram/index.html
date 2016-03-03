@@ -211,6 +211,8 @@
       
 
       
+
+
       
       
     </ul>
@@ -302,6 +304,7 @@
 
           
           
+
         </div>
       </header>
     
@@ -333,6 +336,12 @@
 <p>　　过去的五年对于我们中间很多人来说是一次激动人心的狂野之旅。在Instagram 5周岁生日之际，停下来回顾反思是极好的。我很确信我们的社区会持续成长，我们的产品也会更上一层楼，在Medium上从来就不缺“回顾我过去十年”这样的文章。让我们为下一个五年干杯！</p>
 <p>扩展阅读：<a href="https://www.quora.com/What-is-the-genesis-of-Instagram" target="_blank" rel="external">https://www.quora.com/What-is-the-genesis-of-Instagram</a></p>
 
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -768,7 +777,7 @@
     NexT.motion.middleWares.sidebar = function () {
       var $tocContent = $('.post-toc-content');
 
-      if (CONFIG.sidebar === 'post') {
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
         if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
           NexT.utils.displaySidebar();
         }
@@ -813,6 +822,7 @@
 
 
 
+  
   
   
 

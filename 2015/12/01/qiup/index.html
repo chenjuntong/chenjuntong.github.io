@@ -208,6 +208,8 @@
       
 
       
+
+
       
       
     </ul>
@@ -299,6 +301,7 @@
 
           
           
+
         </div>
       </header>
     
@@ -336,6 +339,12 @@
 <p>我们如今已经取得了很多进步，但前方漫漫长路依然充满挑战。假如你对在Quip工作很感兴趣，不妨移步到我们的招聘页面。假如你想要学习更多的具有可操作性以及经证实的方法策略来成为一名高效工程师，不妨看一下我的这本书，《The Effective Engineer》。</p>
 <p>这篇文章基于我在Quora上最开始写的一个答案，Slate也有转载。<br>①除了雄心壮志，Quora和Quip在许多方面都有共同点。它们都是由前Facebook CTO创立的，都从Benchmark风投拿到了A轮融资，当然，也都是从Qu起步的。<br>②我们的使命，来自Quora博客。<br>③我们的MySQL数据存储使用了一种类似于FriendFeed的非模式化MySQL设计，不同的是，我们并不使用Python对象序列化方法，而是采用了Protocol Buffers。<br>④Bret Taylor（译者注：Quip的创始人，前Facebook CTO）写过一篇更加鞭辟入里的技术文章，其详细描述了我们（在产品中）共同的C++库和React架构：React with C++: Building the Quip Mac and Windows Apps.</p>
 
+      
+    </div>
+
+    <div>
+      
+        
       
     </div>
 
@@ -769,7 +778,7 @@
     NexT.motion.middleWares.sidebar = function () {
       var $tocContent = $('.post-toc-content');
 
-      if (CONFIG.sidebar === 'post') {
+      if (CONFIG.scheme !== 'Pisces' && (CONFIG.sidebar.display === 'post' || CONFIG.sidebar.display === 'always')) {
         if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
           NexT.utils.displaySidebar();
         }
@@ -814,6 +823,7 @@
 
 
 
+  
   
   
 
