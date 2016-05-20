@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ComputerNetworking," />
 
 
 
@@ -86,15 +86,25 @@
 
 
 
-<meta name="description" content="背负青天而莫之夭阏">
-<meta property="og:type" content="website">
-<meta property="og:title" content="陈钧桐的记忆宫殿">
-<meta property="og:url" content="chenjuntong.me/index.html">
+<meta name="description" content="TCP is said to be connection-oriented because before one application process canbegin to send data to another, the two processes must first “handshake” with eachother…this connection-establishment pro">
+<meta property="og:type" content="article">
+<meta property="og:title" content="为什么在TCP协议中建立连接的握手需要三次？">
+<meta property="og:url" content="chenjuntong.me/2016/05/20/为什么在TCP协议中建立连接的握手需要三次？/index.html">
 <meta property="og:site_name" content="陈钧桐的记忆宫殿">
-<meta property="og:description" content="背负青天而莫之夭阏">
+<meta property="og:description" content="TCP is said to be connection-oriented because before one application process canbegin to send data to another, the two processes must first “handshake” with eachother…this connection-establishment pro">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/6ccda21fgw1f4106u28m1j207g065aan.jpg">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/1whogirjbb4q3o0bchjtlbov/image_1aj77dkb21rbe11dveeiq87oao9.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/emfrdjrqo1nrwz3oa6wlvys4/image_1aj781udug7ima0cechhm1v7613.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/kzk0u2my29im6yisje2lvip2/image_1aj78pd0u1u87t8sfkbfi4ph3u.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/8ny8vmo54m4hm1peqe1sws9y/image_1aj770lh7100k1o0e10tepj8157a9.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/k6sniqxus2vrfcthzwfymh92/image_1aj7747f01ep815ao1ddrobf1c0um.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/1qqd4k13hl9049uqnef3zi9o/image_1aj78clj7fmq1lidumdkrp5e71t.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/x30m4x57up90bbonn2szybvf/image_1aj78jofo16cq11041uvp1hds1qk82a.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png">
+<meta property="og:updated_time" content="2016-05-20T14:47:08.307Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="陈钧桐的记忆宫殿">
-<meta name="twitter:description" content="背负青天而莫之夭阏">
+<meta name="twitter:title" content="为什么在TCP协议中建立连接的握手需要三次？">
+<meta name="twitter:description" content="TCP is said to be connection-oriented because before one application process canbegin to send data to another, the two processes must first “handshake” with eachother…this connection-establishment pro">
 
 
 
@@ -112,7 +122,7 @@
   };
 </script>
 
-  <title> 陈钧桐的记忆宫殿 </title>
+  <title> 为什么在TCP协议中建立连接的握手需要三次？ | 陈钧桐的记忆宫殿 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -143,9 +153,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -222,9 +230,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
   
@@ -244,10 +252,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2016/05/20/为什么在TCP协议中建立连接的握手需要三次？/" itemprop="url">
-                  为什么在TCP协议中建立连接的握手需要三次？
-                </a>
+                为什么在TCP协议中建立连接的握手需要三次？
               
             
           </h1>
@@ -294,9 +299,7 @@
       
 
       
-        
-          
-            <blockquote>
+        <blockquote>
 <p>TCP is said to be <strong>connection-oriented</strong> because before one application process can<br>begin to send data to another, the two processes must first “handshake” with each<br>other…this connection-establishment procedure is often referred to as a <strong>three-way handshake</strong>. <code>——《Computer networking : a top-down approach》</code></p>
 </blockquote>
 <p>在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为<strong>三次握手</strong>。（假如你已经忘了的话，我在文末写了段<code>WireShark抓包实战：TCP连接的建立</code>）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：<strong>为什么在TCP协议中建立连接的握手需要三次？</strong>二次行不行？四次可以吗？“三”这个数字是怎么来的？与道家所讲的“一生二，二生三，三生万物”有关联吗？</p>
@@ -338,402 +341,58 @@
 <p>⑧第三次握手：<br><img src="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png" alt="image_1aj79cka2fpb1v7bhm8ns5v4v4b.png-33.5kB"><br>客户端再次发送确认包，标志位<code>ACK=1</code>，<code>SYN=0</code>，并且将服务器发来的序列号<code>seq</code>+1，放在自己确定字段<code>ack</code>中发送给对方，同时把自己的序列号<code>seq</code>加1再发送出去，即<code>seq=1</code>。</p>
 <p>至此TCP连接已经建立，客户端进入<code>ESTABLISHED</code>(已建立连接)状态，当服务端收到确认后，也进入 <code>ESTABLISHED</code>状态，它们之间便可以正式传输数据了。</p>
 
-          
+      
+    </div>
+
+    <div>
+      
         
       
     </div>
 
     <div>
       
-    </div>
+        
 
-    <div>
       
     </div>
 
     <footer class="post-footer">
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/12/01/qiup/" itemprop="url">
-                  势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-12-01T19:51:02+08:00" content="2015-12-01">
-              2015-12-01
-            </time>
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/原创英文翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">原创英文翻译</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/12/01/qiup/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/01/qiup/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
+            <a href="/tags/ComputerNetworking/" rel="tag">#ComputerNetworking</a>
           
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？自从在Quora工作以来（以及最近在Quip的这些年），我一直在努力地思考这个问题。我是在Quora和Quip分别只有12人和13人的时候加入的。这两家初创企业都有雄心勃勃的使命。Quora致力于分享和增长全世界的知识，同时建造一座互联网上的“亚历山大图书馆”。在Quip，我们立志于打造出新一代的生产力工具，它能让每一家公司的每一个人在每一天使用起来都非常享受。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/12/01/qiup/">
-              阅读全文 &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/12/01/qiup/" rel="next" title="势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip">
+                <i class="fa fa-chevron-left"></i> 势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip
+              </a>
+            
           </div>
-        
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
+          <div class="post-nav-prev post-nav-item">
             
-            
-              
-                
-                <a class="post-title-link" href="/2015/10/29/instagram/" itemprop="url">
-                  缔造Instagram的这五年
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-10-29T09:52:28+08:00" content="2015-10-29">
-              2015-10-29
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/原创英文翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">原创英文翻译</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/10/29/instagram/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/10/29/instagram/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
+          </div>
         </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/10/29/instagram/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2015/08/23/elon musk/" itemprop="url">
-                  「钢铁侠现实版」Elon Musk - 地球上最炫酷的人
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2015-08-23T16:17:38+08:00" content="2015-08-23">
-              2015-08-23
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/原创英文翻译/" itemprop="url" rel="index">
-                    <span itemprop="name">原创英文翻译</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2015/08/23/elon musk/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/08/23/elon musk/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          我将通过这篇文章去探索揭秘身他是如何白手起家成为亿万富翁和现实中的Tony Stark（译者注：钢铁侠在电影中的名字）。不过现在，还是引用传奇亿万富翁Richard Branson的一小段话来为这场好戏拉开序幕吧：不管外界质疑声是多么地此起彼伏，Elon总能如有神助般地把废铜烂铁变为如意金箍，借定海神针平息一切。回想一下在20世纪90年代的时候，我们会把自己的信用卡号码给素不相识的陌生人吗？然而Elon创造了一个叫PayPal的小玩意儿，结局今天你们也都知道了。他的特斯拉汽车和SolarCity公司正在把能源可再生的纤尘不染的未来天堂挪到地上……他的SpaceX正在重新探索太空……矛盾的是，一方面Elon在努力改善我们所居住的地球，另一方面他又为了帮助我们离开地球而在建造太空飞船。
-          <div class="post-more-link text-center">
-            <a class="btn" href="/2015/08/23/elon musk/">
-              阅读全文 &raquo;
-            </a>
-          </div>
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
@@ -741,6 +400,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/20/为什么在TCP协议中建立连接的握手需要三次？/"
+           data-title="为什么在TCP协议中建立连接的握手需要三次？" data-url="chenjuntong.me/2016/05/20/为什么在TCP协议中建立连接的握手需要三次？/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -760,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -818,6 +494,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -914,6 +601,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
 
   
 
