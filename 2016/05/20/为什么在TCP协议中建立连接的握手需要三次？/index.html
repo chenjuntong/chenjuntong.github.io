@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/1qqd4k13hl9049uqnef3zi9o/image_1aj78clj7fmq1lidumdkrp5e71t.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/x30m4x57up90bbonn2szybvf/image_1aj78jofo16cq11041uvp1hds1qk82a.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png">
-<meta property="og:updated_time" content="2016-05-20T14:55:24.383Z">
+<meta property="og:updated_time" content="2016-05-20T14:56:38.079Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么在TCP协议中建立连接的握手需要三次？">
 <meta name="twitter:description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为**三次握手**。（假如你已经忘了的话，我在文末写了段`WireShark抓包实战：TCP连接的建立`）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：**为什么在TC">
@@ -328,7 +328,7 @@
 <p>It may seem that a two-message exchange would suffice to establish a connection.However, the three-way handshake is both necessary and sufficient for correct synchronization between the two ends of the connection given internet delivery semantics.To understand the reason that connection establishment is difficult, remember that TCP uses an unreliable packet delivery service. Therefore, messages can be lost, delayed,duplicated, or delivered out of order. To accommodate loss, TCP must retransmit requests. However, trouble can arise if excessive delay causes retransmission, which means both the original and retransmitted copy arrive while the connection is being established. Retransmitted requests can also be delayed until after a connection has been established, used, and terminated! The three-way handshake and rules that prevent restarting a connection after it has terminated are carefully designed to compensate for all possible situations.<code>——《Internetworking with TCP/IP》</code></p>
 </blockquote>
 <p>相信聪明的读者读到这里，已是胸有成竹。</p>
-<p>###WireShark抓包实战：TCP连接的建立<br>知乎上流行一句话叫“先问是不是，再问为什么”。那么现在就让我用WireShark抓包看看，TCP是不是这样子建立连接的。先看一下课本是怎么介绍的：</p>
+<h3 id="WireShark抓包实战：TCP连接的建立">WireShark抓包实战：TCP连接的建立</h3><p>知乎上流行一句话叫“先问是不是，再问为什么”。那么现在就让我用WireShark抓包看看，TCP是不是这样子建立连接的。先看一下课本是怎么介绍的：</p>
 <p><img src="http://static.zybuluo.com/JuntongCHEN/1whogirjbb4q3o0bchjtlbov/image_1aj77dkb21rbe11dveeiq87oao9.png" alt="image_1aj77dkb21rbe11dveeiq87oao9.png-65.4kB"></p>
 <blockquote>
 <p>To establish a connection, TCP uses a <em>three-way handshake.</em> That is, three messages are exchanged that allow each side to agree to form a connection and know that the other side has agreed. The first segment of a handshake can be identified because it has the SYN‡ bit set in the code field. The second message has both the SYN and ACK bits set to indicate that it acknowledges the first SYN segment and continues the handshake. The final handshake message is only an acknowledgement and is merely used to inform the destination that both sides agree that a connection has been established.<code>——《Internetworking with TCP/IP》</code></p>
@@ -501,7 +501,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引子：红蓝军问题（Two_Generals’_Problem）"><span class="nav-number">1.</span> <span class="nav-text">引子：红蓝军问题（Two Generals’ Problem）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#历史的行程：无线电台"><span class="nav-number">2.</span> <span class="nav-text">历史的行程：无线电台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#众里寻他千百度"><span class="nav-number">3.</span> <span class="nav-text">众里寻他千百度</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#引子：红蓝军问题（Two_Generals’_Problem）"><span class="nav-number">1.</span> <span class="nav-text">引子：红蓝军问题（Two Generals’ Problem）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#历史的行程：无线电台"><span class="nav-number">2.</span> <span class="nav-text">历史的行程：无线电台</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#众里寻他千百度"><span class="nav-number">3.</span> <span class="nav-text">众里寻他千百度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#WireShark抓包实战：TCP连接的建立"><span class="nav-number">4.</span> <span class="nav-text">WireShark抓包实战：TCP连接的建立</span></a></li></ol></div>
             
           </div>
         </section>
