@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="chenjuntong.me/"/>
-  <updated>2016-05-20T14:47:08.307Z</updated>
+  <updated>2016-02-14T18:57:41.059Z</updated>
   <id>chenjuntong.me/</id>
   
   <author>
@@ -13,63 +13,6 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title><![CDATA[为什么在TCP协议中建立连接的握手需要三次？]]></title>
-    <link href="chenjuntong.me/2016/05/20/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8TCP%E5%8D%8F%E8%AE%AE%E4%B8%AD%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%8F%A1%E6%89%8B%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%EF%BC%9F/"/>
-    <id>chenjuntong.me/2016/05/20/为什么在TCP协议中建立连接的握手需要三次？/</id>
-    <published>2016-05-20T14:46:24.000Z</published>
-    <updated>2016-05-20T14:47:08.307Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>TCP is said to be <strong>connection-oriented</strong> because before one application process can<br>begin to send data to another, the two processes must first “handshake” with each<br>other…this connection-establishment procedure is often referred to as a <strong>three-way handshake</strong>. <code>——《Computer networking : a top-down approach》</code></p>
-</blockquote>
-<p>在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为<strong>三次握手</strong>。（假如你已经忘了的话，我在文末写了段<code>WireShark抓包实战：TCP连接的建立</code>）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：<strong>为什么在TCP协议中建立连接的握手需要三次？</strong>二次行不行？四次可以吗？“三”这个数字是怎么来的？与道家所讲的“一生二，二生三，三生万物”有关联吗？</p>
-<p>###引子：红蓝军问题（Two Generals’ Problem）<br>让我们回溯一下历史，回到冷兵器时代，那时候情报只能靠斥候骑马送达，而斥候在路上很可能被敌军截下。在这种情况下，两支军队之间如何进行通讯就引申出了一个很著名的思想实验——红蓝军问题（Two Generals’ Problem）。</p>
-<p><img src="http://ww2.sinaimg.cn/large/6ccda21fgw1f4106u28m1j207g065aan.jpg" alt="Two Generals&#39; Problem"></p>
-<blockquote>
-<p>Two armies, each led by a general, are preparing to attack a fortified city. A valley separates the two hills, and the only way for the two generals to communicate is by sending messengers through the valley. Unfortunately, the valley is occupied by the city’s defenders and there’s a chance that any given messenger sent through the valley will be captured.——<a href="https://en.wikipedia.org/wiki/Two_Generals%27_Problem" target="_blank" rel="external">Two Generals’ Problem from wikipedia</a></p>
-</blockquote>
-<p>被蓝军隔断的两支红军要想攻下蓝军，就必须商定好统一的时间吹响集结号合力进攻。于是，左边红军的将军A派斥候告诉右边红军的将军B，“明早九点吹响集结号！”。幸运的是，斥候成功将情报送达，这时将军B虽然知道了时间，但担心将军A还不知道他（将军B）已经收到了情报，从而不敢贸然进攻，于是又派斥候把将军B已经记下时间点的这个情况告诉将军A。幸运第二次降临，斥候也成功地返回左边的红军报到。此时，将军A明早就敢吹响集结号吗？他不敢，因为他担心将军B不知道这次斥候成功送达了情报，在这种情况下，将军B在明早也不敢贸然进攻。于是将军A又派斥候去右边，告诉将军B他（将军A）已经知道了将军B知道明早九点吹响集结号的情报。幸运第三次降临，斥候成功地到右边红军报到。此时，将军B明早就敢发起进攻吗？他依然不敢，因为他担心将军A不知道这次斥候成功送达了情报，在这种情况下，将军A在明早也不敢吹响集结号……</p>
-<p>聪明的读者已经猜到，这是一场永远达不成协议的进攻。无论情报送达了多少个来回，总是没有办法保证每个将军想对“最后一次情报送达”的“确认”生效。</p>
-<blockquote>
-<p>Thus it quickly becomes evident that no matter how many rounds of confirmation are made, there is no way to guarantee the second requirement that each general be sure the other has agreed to the attack plan. Whichever general sends the final messenger will always be left wondering whether the messenger got through.——<a href="https://en.wikipedia.org/wiki/Two_Generals%27_Problem" target="_blank" rel="external">Two Generals’ Problem from wikipedia</a></p>
-</blockquote>
-<p>这个思维实验说明了一个重要的通信道理：在不可信的信道上，不可能实现完全可信的通信。而实际信道绝对是有扰的，换句话说，<strong>世界上不存在完全可靠的通信协议。</strong></p>
-<p>###历史的行程：无线电台<br>人生天地之间，若白驹之过隙，忽然而已。我们来到已经诞生了无线电台的时代。在这个时空，通讯不再依靠快马扬鞭的斥候，而是靠无线电台。那么斥候会不会被半路劫走就无须担心，取而代之的是，我们要确认<strong>通讯设备是可以正常工作的</strong>，换言之，<strong>发信机和收信机是好的</strong>。那么如果两个人要进行成功的通讯，他们相互之间需要联系几次，才能知道自己设备是好的呢？</p>
-<p><strong>第一次</strong>：将军A给将军B发送了尝试建立通讯的电报。此时，将军B收到了，那么将军B能确认自己的收信机，以及将军A的发信机是好的，而将军A什么都确认不了。<br><strong>第二次</strong>：将军B给将军A发送了回应的电报。此时，将军A收到了，那么将军A能确认自己的发信机、收信机都是好的，以及将军B的发信机、收信机也是好的，而将军B依然不能确认自己的发信机，以及将军A的收信机是好的。所以将军A还不能讲正事。<br><strong>第三次</strong>：将军A对将军B的回应进行了回应，再发送了一次电报。此时将军A知道双方的通讯设备是正常工作的，这一次回应只是为了消除将军B对自己的发信机，以及将军A的收信机的担心。现在，将军A不用等将军B的再次回应，就可以开始讲正事了。</p>
-<p>以上共有几次握手呢？数一数，一共是<strong>三次握手</strong>。那握手三次后，后面的通讯就一定能一直正常工作吗？当然不能，握手成功后设备可以突然故障，信号可以突然丢失，还有许多可能可以导致通信失败。<strong>三次握手的意义是在于它排除了两个无线电台本身的收发信故障。</strong>如果再多握手几次，变成四次握手，五次握手等，也许会更加靠谱一些，但正如红蓝军问题所揭示的道理一样：世界上不存在完全可靠的通信协议。</p>
-<p>有的读者想问了，电台通信一定要三次握手吗？当然不一定。在间谍电影里，我们经常可以看到间谍为了不暴露自己，可以只用收信机而不发信，传送情报时再采取其他手段，例如在冷咖啡的杯垫下留下密文。</p>
-<p>在这里，我们可以得出结论：<strong>握手次数在建立连接的<code>可靠性</code>和<code>性能</code>上进行取舍后，得出<code>三次</code></strong>。</p>
-<blockquote>
-<p>握手次数本来就是比较灵活的问题，但是作为协议必须确定。并不会适合所有的情况。现行的tcp协议每次握手的时候具体的通信协议细节，是为三次握手特别设定的。假如当时设定的是四次握手，它的第三次握手的内容就不会和现在三次握手的时候第三次的内容一样了。——Fluxay</p>
-</blockquote>
-<p>所以在逻辑上是这样的，互联网诞生之初，在连接的<code>可靠性</code>和<code>性能</code>上平衡后，选择的方案是<code>三次握手</code>。在这之后，TCP协议的设计者按照三次握手的方案具体设计了每次握手的通信协议细节。</p>
-<p>这个时候，让我们回到教材，看看课本对为什么选择<code>三次握手</code>方案的介绍：</p>
-<blockquote>
-<p>It may seem that a two-message exchange would suffice to establish a connection.However, the three-way handshake is both necessary and sufficient for correct synchronization between the two ends of the connection given internet delivery semantics.To understand the reason that connection establishment is difficult, remember that TCP uses an unreliable packet delivery service. Therefore, messages can be lost, delayed,duplicated, or delivered out of order. To accommodate loss, TCP must retransmit requests. However, trouble can arise if excessive delay causes retransmission, which means both the original and retransmitted copy arrive while the connection is being established. Retransmitted requests can also be delayed until after a connection has been established, used, and terminated! The three-way handshake and rules that prevent restarting a connection after it has terminated are carefully designed to compensate for all possible situations.<code>——《Internetworking with TCP/IP》</code></p>
-</blockquote>
-<p>相信聪明的读者读到这里，已是胸有成竹。</p>
-<p>###WireShark抓包实战：TCP连接的建立<br>知乎上流行一句话叫“先问是不是，再问为什么”。那么现在就让我用WireShark抓包看看，TCP是不是这样子建立连接的。先看一下课本是怎么介绍的：</p>
-<p><img src="http://static.zybuluo.com/JuntongCHEN/1whogirjbb4q3o0bchjtlbov/image_1aj77dkb21rbe11dveeiq87oao9.png" alt="image_1aj77dkb21rbe11dveeiq87oao9.png-65.4kB"></p>
-<blockquote>
-<p>To establish a connection, TCP uses a <em>three-way handshake.</em> That is, three messages are exchanged that allow each side to agree to form a connection and know that the other side has agreed. The first segment of a handshake can be identified because it has the SYN‡ bit set in the code field. The second message has both the SYN and ACK bits set to indicate that it acknowledges the first SYN segment and continues the handshake. The final handshake message is only an acknowledgement and is merely used to inform the destination that both sides agree that a connection has been established.<code>——《Internetworking with TCP/IP》</code></p>
-</blockquote>
-<p>再看一眼TCP报文段结构（TCP Segment Structure）：<br><img src="http://static.zybuluo.com/JuntongCHEN/emfrdjrqo1nrwz3oa6wlvys4/image_1aj781udug7ima0cechhm1v7613.png" alt="image_1aj781udug7ima0cechhm1v7613.png-104.1kB"><br><code>——《TCP/IP Illustrated, Volume 1》</code></p>
-<p>抓包实战开始：<br>①首先打开<code>WireShark</code>，选定要监听的网卡。<br>②在浏览器输入想访问的网址，比如我输入的是<code>chenjuntong.me</code><br><img src="http://static.zybuluo.com/JuntongCHEN/kzk0u2my29im6yisje2lvip2/image_1aj78pd0u1u87t8sfkbfi4ph3u.png" alt="image_1aj78pd0u1u87t8sfkbfi4ph3u.png-29kB"><br>③在过滤器输入<code>HTTP</code>，找到<code>GET Method</code>，右键菜单中选择<code>追踪流-TCP流</code><br><img src="http://static.zybuluo.com/JuntongCHEN/8ny8vmo54m4hm1peqe1sws9y/image_1aj770lh7100k1o0e10tepj8157a9.png" alt="image_1aj770lh7100k1o0e10tepj8157a9.png-54.8kB"></p>
-<p>④此时，通过截获的数据包，我们可以很清楚地看到，客户端和服务器先是在TCP协议下进行了<code>三次握手</code>，然后才进行了HTTP长连接。<br><img src="http://static.zybuluo.com/JuntongCHEN/k6sniqxus2vrfcthzwfymh92/image_1aj7747f01ep815ao1ddrobf1c0um.png" alt="image_1aj7747f01ep815ao1ddrobf1c0um.png-20kB"></p>
-<p>⑤庖丁解牛，让我们来看看每一次握手的具体内容。<br>⑥第一次握手：<br><img src="http://static.zybuluo.com/JuntongCHEN/1qqd4k13hl9049uqnef3zi9o/image_1aj78clj7fmq1lidumdkrp5e71t.png" alt="image_1aj78clj7fmq1lidumdkrp5e71t.png-31.8kB"><br>客户端发送建立连接请求，标志位<code>SYN=1</code>，序列号（Sequence number）<code>seq=0</code> 。</p>
-<p>⑦第二次握手：<br><img src="http://static.zybuluo.com/JuntongCHEN/x30m4x57up90bbonn2szybvf/image_1aj78jofo16cq11041uvp1hds1qk82a.png" alt="image_1aj78jofo16cq11041uvp1hds1qk82a.png-34.4kB"><br>服务器发回确认包，标志位<code>SYN=1，ACK=1</code>，同时发送服务器的序列号<code>seq=0</code>，将自己的确认序号(Acknowledgement Number)<code>ack</code>设置为客户端的序列号<code>seq</code>加1，即0+1=1，<code>ack=1</code>。</p>
-<p>⑧第三次握手：<br><img src="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png" alt="image_1aj79cka2fpb1v7bhm8ns5v4v4b.png-33.5kB"><br>客户端再次发送确认包，标志位<code>ACK=1</code>，<code>SYN=0</code>，并且将服务器发来的序列号<code>seq</code>+1，放在自己确定字段<code>ack</code>中发送给对方，同时把自己的序列号<code>seq</code>加1再发送出去，即<code>seq=1</code>。</p>
-<p>至此TCP连接已经建立，客户端进入<code>ESTABLISHED</code>(已建立连接)状态，当服务端收到确认后，也进入 <code>ESTABLISHED</code>状态，它们之间便可以正式传输数据了。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>TCP is said to be <strong>connection-oriented</strong> because before one application process can<br>begin to send data to a]]>
-    </summary>
-    
-      <category term="ComputerNetworking" scheme="chenjuntong.me/tags/ComputerNetworking/"/>
-    
-  </entry>
   
   <entry>
     <title><![CDATA[势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip]]></title>
