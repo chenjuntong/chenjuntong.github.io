@@ -4,7 +4,7 @@
   <subtitle><![CDATA[我思故我在]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="chenjuntong.me/"/>
-  <updated>2016-05-20T14:56:38.079Z</updated>
+  <updated>2016-05-20T15:06:19.739Z</updated>
   <id>chenjuntong.me/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[为什么在TCP协议中建立连接的握手需要三次？]]></title>
-    <link href="chenjuntong.me/2016/05/20/%E4%B8%BA%E4%BB%80%E4%B9%88%E5%9C%A8TCP%E5%8D%8F%E8%AE%AE%E4%B8%AD%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5%E7%9A%84%E6%8F%A1%E6%89%8B%E9%9C%80%E8%A6%81%E4%B8%89%E6%AC%A1%EF%BC%9F/"/>
-    <id>chenjuntong.me/2016/05/20/为什么在TCP协议中建立连接的握手需要三次？/</id>
+    <link href="chenjuntong.me/2016/05/20/threeway%20handshake/"/>
+    <id>chenjuntong.me/2016/05/20/threeway handshake/</id>
     <published>2016-05-20T14:46:24.000Z</published>
-    <updated>2016-05-20T14:56:38.079Z</updated>
+    <updated>2016-05-20T15:06:19.739Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>TCP is said to be <strong>connection-oriented</strong> because before one application process can<br>begin to send data to another, the two processes must first “handshake” with each<br>other…this connection-establishment procedure is often referred to as a <strong>three-way handshake</strong>. <code>——《Computer networking : a top-down approach》</code></p>
 </blockquote>
@@ -69,6 +69,8 @@
     
       <category term="ComputerNetworking" scheme="chenjuntong.me/tags/ComputerNetworking/"/>
     
+      <category term="计算机网络" scheme="chenjuntong.me/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/"/>
+    
   </entry>
   
   <entry>
@@ -76,7 +78,7 @@
     <link href="chenjuntong.me/2015/12/01/qiup/"/>
     <id>chenjuntong.me/2015/12/01/qiup/</id>
     <published>2015-12-01T11:51:02.000Z</published>
-    <updated>2016-02-14T18:57:41.059Z</updated>
+    <updated>2016-05-20T15:06:40.893Z</updated>
     <content type="html"><![CDATA[<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？</p>
@@ -112,7 +114,7 @@
     
       <category term="英文科技文章翻译" scheme="chenjuntong.me/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
     
-      <category term="原创英文翻译" scheme="chenjuntong.me/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+      <category term="英文翻译" scheme="chenjuntong.me/categories/%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
@@ -121,7 +123,7 @@
     <link href="chenjuntong.me/2015/10/29/instagram/"/>
     <id>chenjuntong.me/2015/10/29/instagram/</id>
     <published>2015-10-29T01:52:28.000Z</published>
-    <updated>2016-02-14T18:50:21.728Z</updated>
+    <updated>2016-05-20T15:07:27.545Z</updated>
     <content type="html"><![CDATA[<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>　　2010年，在我们发布Instagram第一个版本的前一晚，我与联合创始人Kevin打赌，第一天大概会有多少人下载这款app。Kevin猜有2500人，我当时特别乐观，赌了把大的，押25000人。第二天，我简直不敢相信我的猜测分毫不差。<br>　　今天，在Instagram的五周岁之际，我们拥有来自世界各地的4亿用户，他们每天上传8000万份相片和视频。回望过去，我们在初代产品上就做到了在简洁和精巧中取得恰到好处的平衡，同时就在去年，我们回炉重造了「搜索&amp;发现」（Search &amp; Explore）功能，发布了全新的私密分享功能「Instagram Direct」，如「Layout」这样的创意拼图工具也应运而生。<br>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。</p>
@@ -149,7 +151,7 @@
     
       <category term="英文科技文章翻译" scheme="chenjuntong.me/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
     
-      <category term="原创英文翻译" scheme="chenjuntong.me/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+      <category term="英文翻译" scheme="chenjuntong.me/categories/%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
@@ -158,7 +160,7 @@
     <link href="chenjuntong.me/2015/08/23/elon%20musk/"/>
     <id>chenjuntong.me/2015/08/23/elon musk/</id>
     <published>2015-08-23T08:17:38.000Z</published>
-    <updated>2016-02-14T18:57:13.873Z</updated>
+    <updated>2016-05-20T15:07:35.808Z</updated>
     <content type="html"><![CDATA[<p><i class="icon-paste"></i> 原文地址：<a href="http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html" target="_blank" rel="external">Elon Musk: The World’s Raddest Man</a><br><i class="icon-pencil"></i> <strong><em>作者：Tim Urban</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>　　上个月，我接到一个让我虎躯一震的电话。<br><img src="http://ww3.sinaimg.cn/large/6ccda21fgw1eu3frc7dnfj20ul0oxdgt.jpg" alt="Call1"></p>
@@ -239,7 +241,7 @@
     
       <category term="英文科技文章翻译" scheme="chenjuntong.me/tags/%E8%8B%B1%E6%96%87%E7%A7%91%E6%8A%80%E6%96%87%E7%AB%A0%E7%BF%BB%E8%AF%91/"/>
     
-      <category term="原创英文翻译" scheme="chenjuntong.me/categories/%E5%8E%9F%E5%88%9B%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
+      <category term="英文翻译" scheme="chenjuntong.me/categories/%E8%8B%B1%E6%96%87%E7%BF%BB%E8%AF%91/"/>
     
   </entry>
   
