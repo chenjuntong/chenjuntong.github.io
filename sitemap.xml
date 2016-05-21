@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>chenjuntong.me/tags/index.html</loc>
+    <lastmod>2016-05-21T13:08:04.179Z</lastmod>
+  </url>
+  
+  <url>
     <loc>chenjuntong.me/404.html</loc>
-    <lastmod>2016-05-21T13:04:01.559Z</lastmod>
+    <lastmod>2016-05-21T13:06:44.960Z</lastmod>
   </url>
   
   <url>
@@ -34,11 +39,6 @@
   <url>
     <loc>chenjuntong.me/categories/index.html</loc>
     <lastmod>2016-02-18T15:11:37.694Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>chenjuntong.me/tags/index.html</loc>
-    <lastmod>2015-10-29T07:22:01.585Z</lastmod>
   </url>
   
 </urlset>
