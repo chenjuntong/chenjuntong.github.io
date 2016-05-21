@@ -86,12 +86,12 @@
 
 
 
-<meta name="description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为**三次握手**。（假如你已经忘了的话，我在文末写了段`WireShark抓包实战：TCP连接的建立`）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：**为什么在TC">
+<meta name="description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为三次握手。（假如你已经忘了的话，我在文末写了段WireShark抓包实战：TCP连接的建立）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：为什么在TCP协议中建立连接">
 <meta property="og:type" content="article">
 <meta property="og:title" content="为什么在TCP协议中建立连接的握手需要三次？">
 <meta property="og:url" content="chenjuntong.me/2016/05/20/threeway handshake/index.html">
 <meta property="og:site_name" content="陈钧桐的记忆宫殿">
-<meta property="og:description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为**三次握手**。（假如你已经忘了的话，我在文末写了段`WireShark抓包实战：TCP连接的建立`）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：**为什么在TC">
+<meta property="og:description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为三次握手。（假如你已经忘了的话，我在文末写了段WireShark抓包实战：TCP连接的建立）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：为什么在TCP协议中建立连接">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/6ccda21fgw1f4106u28m1j207g065aan.jpg">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/1whogirjbb4q3o0bchjtlbov/image_1aj77dkb21rbe11dveeiq87oao9.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/emfrdjrqo1nrwz3oa6wlvys4/image_1aj781udug7ima0cechhm1v7613.png">
@@ -101,10 +101,10 @@
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/1qqd4k13hl9049uqnef3zi9o/image_1aj78clj7fmq1lidumdkrp5e71t.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/x30m4x57up90bbonn2szybvf/image_1aj78jofo16cq11041uvp1hds1qk82a.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png">
-<meta property="og:updated_time" content="2016-05-21T13:33:05.132Z">
+<meta property="og:updated_time" content="2016-05-21T13:34:28.595Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么在TCP协议中建立连接的握手需要三次？">
-<meta name="twitter:description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为**三次握手**。（假如你已经忘了的话，我在文末写了段`WireShark抓包实战：TCP连接的建立`）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：**为什么在TC">
+<meta name="twitter:description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为三次握手。（假如你已经忘了的话，我在文末写了段WireShark抓包实战：TCP连接的建立）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：为什么在TCP协议中建立连接">
 
 
 
