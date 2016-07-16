@@ -86,20 +86,12 @@
 
 
 
-<meta name="description" content="本笔记基于ROBERT SEDGEWICK &amp;amp; KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。
-
-课程总览：
-使用Quick-Find 方法来解决，直接对数组的每一个元素进行检查和操作：代码实现：
-使用这个方法的问题是成本太高了，对N个目标进行N次unio">
+<meta name="description" content="本笔记基于**ROBERT SEDGEWICK &amp; KEVIN WAYNE**开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Algorithms》摘录评注之壹：绪论">
 <meta property="og:url" content="chenjuntong.me/2015/11/24/algorithms/index.html">
 <meta property="og:site_name" content="陈钧桐的记忆宫殿">
-<meta property="og:description" content="本笔记基于ROBERT SEDGEWICK &amp;amp; KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。
-
-课程总览：
-使用Quick-Find 方法来解决，直接对数组的每一个元素进行检查和操作：代码实现：
-使用这个方法的问题是成本太高了，对N个目标进行N次unio">
+<meta property="og:description" content="本笔记基于**ROBERT SEDGEWICK &amp; KEVIN WAYNE**开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/b07nen0n86p5pppb5vowduna/image_1anntk63i12c61im5qn91nf6185b2a.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/au9ap7ktzhn1vb51jndseims/image_1anntnleo1b4d1l1u1749edf55h2n.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/ya2zuxf9fqbka89h0w06g3au/image_1anntorff1qrj1a1i5l1f9n1cgf3h.png">
@@ -117,14 +109,10 @@
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/rvnoe455mwq93yib8r4h62cu/image_1anpnbvvrdja1bof19uonno4pb5i.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/xobmc54xbkeegkxxugmjtb5f/image_1anpnceq10hga6lpqphv376c.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/r1i9wy2go3yi3j324t3y4w8y/image_1anpng5lrk3jbq5gu81n7g1q1i7j.png">
-<meta property="og:updated_time" content="2016-07-16T11:32:52.822Z">
+<meta property="og:updated_time" content="2016-07-16T11:46:55.589Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Algorithms》摘录评注之壹：绪论">
-<meta name="twitter:description" content="本笔记基于ROBERT SEDGEWICK &amp;amp; KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。
-
-课程总览：
-使用Quick-Find 方法来解决，直接对数组的每一个元素进行检查和操作：代码实现：
-使用这个方法的问题是成本太高了，对N个目标进行N次unio">
+<meta name="twitter:description" content="本笔记基于**ROBERT SEDGEWICK &amp; KEVIN WAYNE**开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。">
 
 
 
@@ -377,11 +365,10 @@
 <p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
 </blockquote>
 <p>课程总览：<br><img src="http://static.zybuluo.com/JuntongCHEN/b07nen0n86p5pppb5vowduna/image_1anntk63i12c61im5qn91nf6185b2a.png" alt="image_1anntk63i12c61im5qn91nf6185b2a.png-144.2kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/au9ap7ktzhn1vb51jndseims/image_1anntnleo1b4d1l1u1749edf55h2n.png" alt="image_1anntnleo1b4d1l1u1749edf55h2n.png-116.1kB"></p>
-<p>使用Quick-Find 方法来解决，直接对数组的每一个元素进行检查和操作：<br><img src="http://static.zybuluo.com/JuntongCHEN/ya2zuxf9fqbka89h0w06g3au/image_1anntorff1qrj1a1i5l1f9n1cgf3h.png" alt="image_1anntorff1qrj1a1i5l1f9n1cgf3h.png-82.6kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/gqkp07l59bb8erfpm5m2e7bf/image_1anntpvmr1ek3prncji1tbi1tq94b.png" alt="image_1anntpvmr1ek3prncji1tbi1tq94b.png-60.2kB"></p>
-<p>使用这个方法的问题是成本太高了，对N个目标进行N次union连接操作共需要访问数组N²次。<br>试一试别的方法：使用Quick-Union（懒人方法），通过对元素的“根”来进行检查和操作。<br><img src="http://static.zybuluo.com/JuntongCHEN/q096dgb4uzlnf64gwzr27yk1/image_1anpn728n3du3bck1f162g1bms9.png" alt="image_1anpn728n3du3bck1f162g1bms9.png-69.9kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/d3a68l8g591cw73btiboiwog/image_1anpn838v3bjlh9fqhsk11ka61g.png" alt="image_1anpn838v3bjlh9fqhsk11ka61g.png-61.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/3tezd1txe3mj7bc56c9h7r6x/image_1anpn8jkq2gf1aisnicus61kc49.png" alt="image_1anpn8jkq2gf1aisnicus61kc49.png-54.7kB"><br>但这个懒人办法也太慢了。前一个Q-Find的union操作要访问N次数组，同时它的“树”（把元素连接起来的样子想象成是树的枝桠）是扁平的，但是保持这样的扁平代价太大；后一个Q-U的“树”会变得非常高，使其find操作也可能需要访问N次数组。那怎么办呢？只要在操作树的时候进行“权衡”就能两全其美啦：<br><img src="http://static.zybuluo.com/JuntongCHEN/ccrrs825o1ysrzdj2lkzz7dn/image_1anpn992ese0114k13n21703kp13.png" alt="image_1anpn992ese0114k13n21703kp13.png-68.2kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/r9naarr63qdlhywlv1l3ucd1/image_1anpn9fdmnkgbnd4eql4l6nf1g.png" alt="image_1anpn9fdmnkgbnd4eql4l6nf1g.png-116kB"></p>
-<p>“权衡”之后Q-Union的树不再肆意地乱长，而是根据以小服大的方式比较均衡扁平地排列开来了。再想一想，还可以把树变得更加扁平吗？<br><img src="http://static.zybuluo.com/JuntongCHEN/izgeov2sy8b6m5rbzdhs1vzt/image_1anpna0setho17se1ifn1h3k17ul2a.png" alt="image_1anpna0setho17se1ifn1h3k17ul2a.png-58.6kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/u8airerxsjjhgu0pen6ylk3s/image_1anpna5uv9g51s9lst9anq1spu2n.png" alt="image_1anpna5uv9g51s9lst9anq1spu2n.png-54.9kB"><br>对，使用路径压缩！将检查过后的节点直接指向根，这样树就进一步扁平了。<br>对解决动态连接问题的这几种方法总结、对比一下，我们要追求在最坏情况下效率最高（成本最小）的方法：<br><img src="http://static.zybuluo.com/JuntongCHEN/3t4pmoq63r4z0nxacvu85c6e/image_1anpnaltkkdt43n1csu1b6o1j573h.png" alt="image_1anpnaltkkdt43n1csu1b6o1j573h.png-60.4kB"><br>现在来简单看一看如何分析算法（的效率/成本）：<br><img src="http://static.zybuluo.com/JuntongCHEN/oqfpnwdhgkv9pe2h0xvzgyam/image_1anpnb3s41fjbpal1v78vft1n5n4b.png" alt="image_1anpnb3s41fjbpal1v78vft1n5n4b.png-78.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/at03dj6ceempqya4wcwkfmzs/image_1anpnb9pm13l223p1o9rcgsrfv4o.png" alt="image_1anpnb9pm13l223p1o9rcgsrfv4o.png-58.5kB"><br>使用“约等于”的波浪号标记来简化数字进行分析：<br><img src="http://static.zybuluo.com/JuntongCHEN/rvnoe455mwq93yib8r4h62cu/image_1anpnbvvrdja1bof19uonno4pb5i.png" alt="image_1anpnbvvrdja1bof19uonno4pb5i.png-93.4kB"><br>来看一下不同算法复杂度的增长速度：<br><img src="http://static.zybuluo.com/JuntongCHEN/xobmc54xbkeegkxxugmjtb5f/image_1anpnceq10hga6lpqphv376c.png" alt="image_1anpnceq10hga6lpqphv376c.png-116.6kB"><br>常用的用来标记算法复杂度的符号说明：<br><img src="http://static.zybuluo.com/JuntongCHEN/r1i9wy2go3yi3j324t3y4w8y/image_1anpng5lrk3jbq5gu81n7g1q1i7j.png" alt="image_1anpng5lrk3jbq5gu81n7g1q1i7j.png-42.8kB"></p>
-<p>title: algorithms<br>date: 2016-07-16 02:26:20<br>categories:</p>
-<h2 id="tags:">tags:</h2>
+<p>使用<code>Quick-Find</code>方法来解决，直接对数组的每一个元素进行检查和操作：<br><img src="http://static.zybuluo.com/JuntongCHEN/ya2zuxf9fqbka89h0w06g3au/image_1anntorff1qrj1a1i5l1f9n1cgf3h.png" alt="image_1anntorff1qrj1a1i5l1f9n1cgf3h.png-82.6kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/gqkp07l59bb8erfpm5m2e7bf/image_1anntpvmr1ek3prncji1tbi1tq94b.png" alt="image_1anntpvmr1ek3prncji1tbi1tq94b.png-60.2kB"></p>
+<p>使用这个方法的问题是成本太高了，对<code>N</code>个目标进行<code>N</code>次<code>union</code>连接操作共需要访问数组N²次。<br>试一试别的方法：使用<code>Quick-Union</code>（懒人方法），通过对元素的“根”来进行检查和操作。<br><img src="http://static.zybuluo.com/JuntongCHEN/q096dgb4uzlnf64gwzr27yk1/image_1anpn728n3du3bck1f162g1bms9.png" alt="image_1anpn728n3du3bck1f162g1bms9.png-69.9kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/d3a68l8g591cw73btiboiwog/image_1anpn838v3bjlh9fqhsk11ka61g.png" alt="image_1anpn838v3bjlh9fqhsk11ka61g.png-61.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/3tezd1txe3mj7bc56c9h7r6x/image_1anpn8jkq2gf1aisnicus61kc49.png" alt="image_1anpn8jkq2gf1aisnicus61kc49.png-54.7kB"><br>但这个懒人办法也太慢了。前一个<code>Q-Find</code>的<code>union</code>操作要访问N次数组，同时它的“树”（把元素连接起来的样子想象成是树的枝桠）是扁平的，但是保持这样的扁平代价太大；后一个<code>Q-U</code>的“树”会变得非常高，使其find操作也可能需要访问N次数组。那怎么办呢？只要在操作树的时候进行“权衡”就能两全其美啦：<br><img src="http://static.zybuluo.com/JuntongCHEN/ccrrs825o1ysrzdj2lkzz7dn/image_1anpn992ese0114k13n21703kp13.png" alt="image_1anpn992ese0114k13n21703kp13.png-68.2kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/r9naarr63qdlhywlv1l3ucd1/image_1anpn9fdmnkgbnd4eql4l6nf1g.png" alt="image_1anpn9fdmnkgbnd4eql4l6nf1g.png-116kB"></p>
+<p>“权衡”之后<code>Q-Union</code>的树不再肆意地乱长，而是根据以小服大的方式比较均衡扁平地排列开来了。再想一想，还可以把树变得更加扁平吗？<br><img src="http://static.zybuluo.com/JuntongCHEN/izgeov2sy8b6m5rbzdhs1vzt/image_1anpna0setho17se1ifn1h3k17ul2a.png" alt="image_1anpna0setho17se1ifn1h3k17ul2a.png-58.6kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/u8airerxsjjhgu0pen6ylk3s/image_1anpna5uv9g51s9lst9anq1spu2n.png" alt="image_1anpna5uv9g51s9lst9anq1spu2n.png-54.9kB"><br>对，使用路径压缩！将检查过后的节点直接指向根，这样树就进一步扁平了。<br>对解决动态连接问题的这几种方法总结、对比一下，我们要追求在最坏情况下效率最高（成本最小）的方法：<br><img src="http://static.zybuluo.com/JuntongCHEN/3t4pmoq63r4z0nxacvu85c6e/image_1anpnaltkkdt43n1csu1b6o1j573h.png" alt="image_1anpnaltkkdt43n1csu1b6o1j573h.png-60.4kB"><br>现在来简单看一看如何分析算法（的效率/成本）：<br><img src="http://static.zybuluo.com/JuntongCHEN/oqfpnwdhgkv9pe2h0xvzgyam/image_1anpnb3s41fjbpal1v78vft1n5n4b.png" alt="image_1anpnb3s41fjbpal1v78vft1n5n4b.png-78.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/at03dj6ceempqya4wcwkfmzs/image_1anpnb9pm13l223p1o9rcgsrfv4o.png" alt="image_1anpnb9pm13l223p1o9rcgsrfv4o.png-58.5kB"><br>使用“约等于”的波浪号标记来简化数字进行分析：<br><img src="http://static.zybuluo.com/JuntongCHEN/rvnoe455mwq93yib8r4h62cu/image_1anpnbvvrdja1bof19uonno4pb5i.png" alt="image_1anpnbvvrdja1bof19uonno4pb5i.png-93.4kB"><br>来看一下不同算法复杂度的增长速度：<br><img src="http://static.zybuluo.com/JuntongCHEN/xobmc54xbkeegkxxugmjtb5f/image_1anpnceq10hga6lpqphv376c.png" alt="image_1anpnceq10hga6lpqphv376c.png-116.6kB"><br>常用的用来标记算法复杂度的符号说明：<br><img src="http://static.zybuluo.com/JuntongCHEN/r1i9wy2go3yi3j324t3y4w8y/image_1anpng5lrk3jbq5gu81n7g1q1i7j.png" alt="image_1anpng5lrk3jbq5gu81n7g1q1i7j.png-42.8kB"></p>
+
       
     </div>
 
@@ -412,16 +399,16 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2015/10/29/instagram/" rel="next" title="缔造Instagram的这五年">
-                <i class="fa fa-chevron-left"></i> 缔造Instagram的这五年
+              <a href="/2015/11/01/qiup/" rel="next" title="势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip">
+                <i class="fa fa-chevron-left"></i> 势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2015/12/01/qiup/" rel="prev" title="势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip">
-                势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip <i class="fa fa-chevron-right"></i>
+              <a href="/2016/05/20/threeway handshake/" rel="prev" title="为什么在TCP协议中建立连接的握手需要三次？">
+                为什么在TCP协议中建立连接的握手需要三次？ <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -590,7 +577,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#tags:"><span class="nav-number">1.</span> <span class="nav-text">tags:</span></a></li></ol></div>
+              <p class="post-toc-empty">此文章未包含目录</p>
             
           </div>
         </section>
