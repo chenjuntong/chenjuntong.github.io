@@ -1,0 +1,735 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="algorithms," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="陈钧桐的记忆宫殿" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort排序。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Algorithms》摘录评注之叁：基本排序">
+<meta property="og:url" content="chenjuntong.me/2015/12/03/alg-03/index.html">
+<meta property="og:site_name" content="陈钧桐的记忆宫殿">
+<meta property="og:description" content="本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort排序。">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/dg1937djims0j9fo8akds8th/image_1ansqmelvr6j105h5jcjeflca1g.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/c81asuptporn992h1gx7doyt/image_1ansqn3idn6g61n12pb15931jai2a.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/28pc57x8pg05gwpx0mgxng4e/image_1ansqobr3sd15sh1pcgk691qs534.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/tqdnainxvpgpmur9fbg7xc1m/image_1ansqofjakjqfntlb71rclcfi3h.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/p1bvjzldpmmzebmuvyyrmq0g/image_1ansqppdlkch1gtvr42odm1ngd4b.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/zk1ymexljxsfx42twr64bye3/image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/6q5vq312dc6azh9oqpbp95d8/image_1ansqq35s19ur1kq82q113s94s55.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/0sgxfkk3zwsdx3gio4bcsdxl/image_1ansqqhs01d6d1mdm1i2ujln4u25v.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/qy2dtsynwg7pxmnv74sif2w3/image_1ansqrt5suq71abp2f81o2fh8p79.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/ymq5ugclci53i6azcjpuwtuu/image_1ansqs7s317bjfmeuuk116cg177m.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/qq2li9b7hpz7p9xxut0clgpf/image_1ansqsnor1tju1giv28guipc9a8g.png">
+<meta property="og:updated_time" content="2016-07-17T16:29:32.504Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Algorithms》摘录评注之叁：基本排序">
+<meta name="twitter:description" content="本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort排序。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="chenjuntong.me/2015/12/03/alg-03/"/>
+
+  <title> 《Algorithms》摘录评注之叁：基本排序 | 陈钧桐的记忆宫殿 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?703e435b48bfd56096c807479f57f203";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">陈钧桐的记忆宫殿</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">背负青天而莫之夭阏</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《Algorithms》摘录评注之叁：基本排序
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-12-03T02:26:20+08:00" content="2015-12-03">
+              2015-12-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/12/03/alg-03/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/12/03/alg-03/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
+</blockquote>
+<h2 id="0-排序的基础：">0.排序的基础：</h2><p>通过对两个元素进行大小比较（小于、等于或者大于），返回不同的结果。<br><img src="http://static.zybuluo.com/JuntongCHEN/dg1937djims0j9fo8akds8th/image_1ansqmelvr6j105h5jcjeflca1g.png" alt="image_1ansqmelvr6j105h5jcjeflca1g.png-141.7kB"><br>比较后进行两步处理：①第一个元素是否比第二个元素小（是的话返回-1）②（满足条件下）两者进行交换<br><img src="http://static.zybuluo.com/JuntongCHEN/c81asuptporn992h1gx7doyt/image_1ansqn3idn6g61n12pb15931jai2a.png" alt="image_1ansqn3idn6g61n12pb15931jai2a.png-49.3kB"></p>
+<h2 id="1-选择排序">1.选择排序</h2><p>实现过程：①从左（第1个元素开始）到右遍历整个数组，找出当前整个数组最小的元素并放到最左边；②继续遍历整个数组（从第2个元素开始，第1个元素的位置在①中已被最小元素固定，所以不用管）找到（整组中）第2小的元素（即剩下数组元素中最小的），放在左起第2个位置；③重复直至整个数组排序完成</p>
+<p>算法复杂度：由于每次都要遍历当前剩下的整个数组，所以需要比较<br>(N – 1) + (N – 2) + … + 1 + 0 ~ N ² / 2 次，交换N次<br><img src="http://static.zybuluo.com/JuntongCHEN/28pc57x8pg05gwpx0mgxng4e/image_1ansqobr3sd15sh1pcgk691qs534.png" alt="image_1ansqobr3sd15sh1pcgk691qs534.png-148.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/tqdnainxvpgpmur9fbg7xc1m/image_1ansqofjakjqfntlb71rclcfi3h.png" alt="image_1ansqofjakjqfntlb71rclcfi3h.png-115.5kB"></p>
+<h2 id="2-插入排序">2.插入排序</h2><p>每次都要从（当前的）头开始遍历，很麻烦，改进一下。<br>实现过程：从右边开始入手，只要当前的元素比左边的元素小，就跟左边交换，循环往复。</p>
+<p>算法复杂度：对于一个随机的数组，平均来看，有一半的元素是已经按从小到大排序好的（不一定连在一起，可以混在没有排序好的元素中间），所以跟之前的选择排序相比，少做一半的比较，（对于选择排序来说，元素怎么排都不影响，它总是机械死板地从头开始遍历整个数组）那么算法复杂度也是选择排序的一半了，即N ² / 4次 。<br><img src="http://static.zybuluo.com/JuntongCHEN/p1bvjzldpmmzebmuvyyrmq0g/image_1ansqppdlkch1gtvr42odm1ngd4b.png" alt="image_1ansqppdlkch1gtvr42odm1ngd4b.png-61.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/zk1ymexljxsfx42twr64bye3/image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png" alt="image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png-117.8kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/6q5vq312dc6azh9oqpbp95d8/image_1ansqq35s19ur1kq82q113s94s55.png" alt="image_1ansqq35s19ur1kq82q113s94s55.png-62.5kB"><br>插入排序在已经部分排序好的数组里的表现：<br><img src="http://static.zybuluo.com/JuntongCHEN/0sgxfkk3zwsdx3gio4bcsdxl/image_1ansqqhs01d6d1mdm1i2ujln4u25v.png" alt="image_1ansqqhs01d6d1mdm1i2ujln4u25v.png-59.6kB"></p>
+<h2 id="3-Shellsort_（Shell是发明这个算法的人的名字）">3.Shellsort （Shell是发明这个算法的人的名字）</h2><p>插入排序比选择排序有进步，但它也有犯傻的时候，比如在右边的某个元素命名比前面7个元素都要小，但我们却要眼睁睁地看着这个元素连续与左边交换7次。聪明的你们想到了，直接一步到位，交换7个位置嘛！然后再每隔3个元素进行比较交换，再回到最基本的对每个元素进行比较交换，这就是<code>Shellsort</code>。<br><img src="http://static.zybuluo.com/JuntongCHEN/qy2dtsynwg7pxmnv74sif2w3/image_1ansqrt5suq71abp2f81o2fh8p79.png" alt="image_1ansqrt5suq71abp2f81o2fh8p79.png-72.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/ymq5ugclci53i6azcjpuwtuu/image_1ansqs7s317bjfmeuuk116cg177m.png" alt="image_1ansqs7s317bjfmeuuk116cg177m.png-148kB"><br>当然，那到底从每隔几个元素进行操作开始呢？这个间隔规律也是个数学问题，<strong>目前并没有一个严密的数学模型可以求得最优解</strong>，在这里介绍一个比较简单易用的：3x+1<br><img src="http://static.zybuluo.com/JuntongCHEN/qq2li9b7hpz7p9xxut0clgpf/image_1ansqsnor1tju1giv28guipc9a8g.png" alt="image_1ansqsnor1tju1giv28guipc9a8g.png-130.8kB"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithms/" rel="tag">#algorithms</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/24/alg-01/" rel="next" title="《Algorithms》摘录评注之壹：绪论">
+                <i class="fa fa-chevron-left"></i> 《Algorithms》摘录评注之壹：绪论
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/05/20/threeway handshake/" rel="prev" title="为什么在TCP协议中建立连接的握手需要三次？">
+                为什么在TCP协议中建立连接的握手需要三次？ <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/12/03/alg-03/"
+           data-title="《Algorithms》摘录评注之叁：基本排序" data-url="chenjuntong.me/2015/12/03/alg-03/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陈钧桐" />
+          <p class="site-author-name" itemprop="name">陈钧桐</p>
+          <p class="site-description motion-element" itemprop="description">我思故我在</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/chenjuntong" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/chenjuntong" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin-square"></i>
+                  
+                  LinkedIn
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/chenjuntong" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-fw fa-pied-piper"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhuanlan.zhihu.com/qinchao" title="覃超帝国" target="_blank">覃超帝国</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0-排序的基础："><span class="nav-number">1.</span> <span class="nav-text">0.排序的基础：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-选择排序"><span class="nav-number">2.</span> <span class="nav-text">1.选择排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-插入排序"><span class="nav-number">3.</span> <span class="nav-text">2.插入排序</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Shellsort_（Shell是发明这个算法的人的名字）"><span class="nav-number">4.</span> <span class="nav-text">3.Shellsort （Shell是发明这个算法的人的名字）</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈钧桐</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chenjuntong"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

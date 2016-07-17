@@ -1,0 +1,739 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="algorithms," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="陈钧桐的记忆宫殿" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="本笔记基于ROBERT SEDGEWICK &amp; KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。这是第壹篇笔记，让我们首先对算法有个直观的认识。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Algorithms》摘录评注之壹：绪论">
+<meta property="og:url" content="chenjuntong.me/2015/11/24/alg-01/index.html">
+<meta property="og:site_name" content="陈钧桐的记忆宫殿">
+<meta property="og:description" content="本笔记基于ROBERT SEDGEWICK &amp; KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。这是第壹篇笔记，让我们首先对算法有个直观的认识。">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/b07nen0n86p5pppb5vowduna/image_1anntk63i12c61im5qn91nf6185b2a.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/au9ap7ktzhn1vb51jndseims/image_1anntnleo1b4d1l1u1749edf55h2n.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/ya2zuxf9fqbka89h0w06g3au/image_1anntorff1qrj1a1i5l1f9n1cgf3h.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/gqkp07l59bb8erfpm5m2e7bf/image_1anntpvmr1ek3prncji1tbi1tq94b.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/q096dgb4uzlnf64gwzr27yk1/image_1anpn728n3du3bck1f162g1bms9.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/d3a68l8g591cw73btiboiwog/image_1anpn838v3bjlh9fqhsk11ka61g.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/3tezd1txe3mj7bc56c9h7r6x/image_1anpn8jkq2gf1aisnicus61kc49.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/ccrrs825o1ysrzdj2lkzz7dn/image_1anpn992ese0114k13n21703kp13.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/r9naarr63qdlhywlv1l3ucd1/image_1anpn9fdmnkgbnd4eql4l6nf1g.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/izgeov2sy8b6m5rbzdhs1vzt/image_1anpna0setho17se1ifn1h3k17ul2a.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/u8airerxsjjhgu0pen6ylk3s/image_1anpna5uv9g51s9lst9anq1spu2n.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/3t4pmoq63r4z0nxacvu85c6e/image_1anpnaltkkdt43n1csu1b6o1j573h.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/oqfpnwdhgkv9pe2h0xvzgyam/image_1anpnb3s41fjbpal1v78vft1n5n4b.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/at03dj6ceempqya4wcwkfmzs/image_1anpnb9pm13l223p1o9rcgsrfv4o.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/rvnoe455mwq93yib8r4h62cu/image_1anpnbvvrdja1bof19uonno4pb5i.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/xobmc54xbkeegkxxugmjtb5f/image_1anpnceq10hga6lpqphv376c.png">
+<meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/r1i9wy2go3yi3j324t3y4w8y/image_1anpng5lrk3jbq5gu81n7g1q1i7j.png">
+<meta property="og:updated_time" content="2016-07-17T10:02:58.539Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="《Algorithms》摘录评注之壹：绪论">
+<meta name="twitter:description" content="本笔记基于ROBERT SEDGEWICK &amp; KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。这是第壹篇笔记，让我们首先对算法有个直观的认识。">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="chenjuntong.me/2015/11/24/alg-01/"/>
+
+  <title> 《Algorithms》摘录评注之壹：绪论 | 陈钧桐的记忆宫殿 </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?703e435b48bfd56096c807479f57f203";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">陈钧桐的记忆宫殿</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">背负青天而莫之夭阏</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                《Algorithms》摘录评注之壹：绪论
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2015-11-24T02:26:20+08:00" content="2015-11-24">
+              2015-11-24
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/algorithms/" itemprop="url" rel="index">
+                    <span itemprop="name">algorithms</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/24/alg-01/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2015/11/24/alg-01/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <blockquote>
+<p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
+</blockquote>
+<p>课程总览：<br><img src="http://static.zybuluo.com/JuntongCHEN/b07nen0n86p5pppb5vowduna/image_1anntk63i12c61im5qn91nf6185b2a.png" alt="image_1anntk63i12c61im5qn91nf6185b2a.png-144.2kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/au9ap7ktzhn1vb51jndseims/image_1anntnleo1b4d1l1u1749edf55h2n.png" alt="image_1anntnleo1b4d1l1u1749edf55h2n.png-116.1kB"></p>
+<p>使用<code>Quick-Find</code>方法来解决，直接对数组的每一个元素进行检查和操作：<br><img src="http://static.zybuluo.com/JuntongCHEN/ya2zuxf9fqbka89h0w06g3au/image_1anntorff1qrj1a1i5l1f9n1cgf3h.png" alt="image_1anntorff1qrj1a1i5l1f9n1cgf3h.png-82.6kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/gqkp07l59bb8erfpm5m2e7bf/image_1anntpvmr1ek3prncji1tbi1tq94b.png" alt="image_1anntpvmr1ek3prncji1tbi1tq94b.png-60.2kB"></p>
+<p>使用这个方法的问题是成本太高了，对<code>N</code>个目标进行<code>N</code>次<code>union</code>连接操作共需要访问数组N²次。<br>试一试别的方法：使用<code>Quick-Union</code>（懒人方法），通过对元素的“根”来进行检查和操作。<br><img src="http://static.zybuluo.com/JuntongCHEN/q096dgb4uzlnf64gwzr27yk1/image_1anpn728n3du3bck1f162g1bms9.png" alt="image_1anpn728n3du3bck1f162g1bms9.png-69.9kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/d3a68l8g591cw73btiboiwog/image_1anpn838v3bjlh9fqhsk11ka61g.png" alt="image_1anpn838v3bjlh9fqhsk11ka61g.png-61.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/3tezd1txe3mj7bc56c9h7r6x/image_1anpn8jkq2gf1aisnicus61kc49.png" alt="image_1anpn8jkq2gf1aisnicus61kc49.png-54.7kB"><br>但这个懒人办法也太慢了。前一个<code>Q-Find</code>的<code>union</code>操作要访问N次数组，同时它的“树”（把元素连接起来的样子想象成是树的枝桠）是扁平的，但是保持这样的扁平代价太大；后一个<code>Q-U</code>的“树”会变得非常高，使其find操作也可能需要访问N次数组。那怎么办呢？只要在操作树的时候进行“权衡”就能两全其美啦：<br><img src="http://static.zybuluo.com/JuntongCHEN/ccrrs825o1ysrzdj2lkzz7dn/image_1anpn992ese0114k13n21703kp13.png" alt="image_1anpn992ese0114k13n21703kp13.png-68.2kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/r9naarr63qdlhywlv1l3ucd1/image_1anpn9fdmnkgbnd4eql4l6nf1g.png" alt="image_1anpn9fdmnkgbnd4eql4l6nf1g.png-116kB"></p>
+<p>“权衡”之后<code>Q-Union</code>的树不再肆意地乱长，而是根据以小服大的方式比较均衡扁平地排列开来了。再想一想，还可以把树变得更加扁平吗？<br><img src="http://static.zybuluo.com/JuntongCHEN/izgeov2sy8b6m5rbzdhs1vzt/image_1anpna0setho17se1ifn1h3k17ul2a.png" alt="image_1anpna0setho17se1ifn1h3k17ul2a.png-58.6kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/u8airerxsjjhgu0pen6ylk3s/image_1anpna5uv9g51s9lst9anq1spu2n.png" alt="image_1anpna5uv9g51s9lst9anq1spu2n.png-54.9kB"><br>对，使用路径压缩！将检查过后的节点直接指向根，这样树就进一步扁平了。<br>对解决动态连接问题的这几种方法总结、对比一下，我们要追求在最坏情况下效率最高（成本最小）的方法：<br><img src="http://static.zybuluo.com/JuntongCHEN/3t4pmoq63r4z0nxacvu85c6e/image_1anpnaltkkdt43n1csu1b6o1j573h.png" alt="image_1anpnaltkkdt43n1csu1b6o1j573h.png-60.4kB"><br>现在来简单看一看如何分析算法（的效率/成本）：<br><img src="http://static.zybuluo.com/JuntongCHEN/oqfpnwdhgkv9pe2h0xvzgyam/image_1anpnb3s41fjbpal1v78vft1n5n4b.png" alt="image_1anpnb3s41fjbpal1v78vft1n5n4b.png-78.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/at03dj6ceempqya4wcwkfmzs/image_1anpnb9pm13l223p1o9rcgsrfv4o.png" alt="image_1anpnb9pm13l223p1o9rcgsrfv4o.png-58.5kB"><br>使用“约等于”的波浪号标记来简化数字进行分析：<br><img src="http://static.zybuluo.com/JuntongCHEN/rvnoe455mwq93yib8r4h62cu/image_1anpnbvvrdja1bof19uonno4pb5i.png" alt="image_1anpnbvvrdja1bof19uonno4pb5i.png-93.4kB"><br>来看一下不同算法复杂度的增长速度：<br><img src="http://static.zybuluo.com/JuntongCHEN/xobmc54xbkeegkxxugmjtb5f/image_1anpnceq10hga6lpqphv376c.png" alt="image_1anpnceq10hga6lpqphv376c.png-116.6kB"><br>常用的用来标记算法复杂度的符号说明：<br><img src="http://static.zybuluo.com/JuntongCHEN/r1i9wy2go3yi3j324t3y4w8y/image_1anpng5lrk3jbq5gu81n7g1q1i7j.png" alt="image_1anpng5lrk3jbq5gu81n7g1q1i7j.png-42.8kB"></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/algorithms/" rel="tag">#algorithms</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/11/01/qiup/" rel="next" title="势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip">
+                <i class="fa fa-chevron-left"></i> 势单一定力薄？且看13罗汉如何纵横8大平台成功开发Quip
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/12/03/alg-03/" rel="prev" title="《Algorithms》摘录评注之叁：基本排序">
+                《Algorithms》摘录评注之叁：基本排序 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2015/11/24/alg-01/"
+           data-title="《Algorithms》摘录评注之壹：绪论" data-url="chenjuntong.me/2015/11/24/alg-01/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.jpg"
+               alt="陈钧桐" />
+          <p class="site-author-name" itemprop="name">陈钧桐</p>
+          <p class="site-description motion-element" itemprop="description">我思故我在</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/chenjuntong" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/chenjuntong" target="_blank" title="LinkedIn">
+                  
+                    <i class="fa fa-fw fa-linkedin-square"></i>
+                  
+                  LinkedIn
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://www.zhihu.com/people/chenjuntong" target="_blank" title="Zhihu">
+                  
+                    <i class="fa fa-fw fa-pied-piper"></i>
+                  
+                  Zhihu
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://zhuanlan.zhihu.com/qinchao" title="覃超帝国" target="_blank">覃超帝国</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2015 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">陈钧桐</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"chenjuntong"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
+  
+
+
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

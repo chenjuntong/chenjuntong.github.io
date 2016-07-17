@@ -75,9 +75,36 @@
   </entry>
   
   <entry>
+    <title><![CDATA[《Algorithms》摘录评注之叁：基本排序]]></title>
+    <link href="chenjuntong.me/2015/12/03/alg-03/"/>
+    <id>chenjuntong.me/2015/12/03/alg-03/</id>
+    <published>2015-12-02T18:26:20.000Z</published>
+    <updated>2016-07-17T16:29:32.504Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
+</blockquote>
+<h2 id="0-排序的基础：">0.排序的基础：</h2><p>通过对两个元素进行大小比较（小于、等于或者大于），返回不同的结果。<br><img src="http://static.zybuluo.com/JuntongCHEN/dg1937djims0j9fo8akds8th/image_1ansqmelvr6j105h5jcjeflca1g.png" alt="image_1ansqmelvr6j105h5jcjeflca1g.png-141.7kB"><br>比较后进行两步处理：①第一个元素是否比第二个元素小（是的话返回-1）②（满足条件下）两者进行交换<br><img src="http://static.zybuluo.com/JuntongCHEN/c81asuptporn992h1gx7doyt/image_1ansqn3idn6g61n12pb15931jai2a.png" alt="image_1ansqn3idn6g61n12pb15931jai2a.png-49.3kB"></p>
+<h2 id="1-选择排序">1.选择排序</h2><p>实现过程：①从左（第1个元素开始）到右遍历整个数组，找出当前整个数组最小的元素并放到最左边；②继续遍历整个数组（从第2个元素开始，第1个元素的位置在①中已被最小元素固定，所以不用管）找到（整组中）第2小的元素（即剩下数组元素中最小的），放在左起第2个位置；③重复直至整个数组排序完成</p>
+<p>算法复杂度：由于每次都要遍历当前剩下的整个数组，所以需要比较<br>(N – 1) + (N – 2) + … + 1 + 0 ~ N ² / 2 次，交换N次<br><img src="http://static.zybuluo.com/JuntongCHEN/28pc57x8pg05gwpx0mgxng4e/image_1ansqobr3sd15sh1pcgk691qs534.png" alt="image_1ansqobr3sd15sh1pcgk691qs534.png-148.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/tqdnainxvpgpmur9fbg7xc1m/image_1ansqofjakjqfntlb71rclcfi3h.png" alt="image_1ansqofjakjqfntlb71rclcfi3h.png-115.5kB"></p>
+<h2 id="2-插入排序">2.插入排序</h2><p>每次都要从（当前的）头开始遍历，很麻烦，改进一下。<br>实现过程：从右边开始入手，只要当前的元素比左边的元素小，就跟左边交换，循环往复。</p>
+<p>算法复杂度：对于一个随机的数组，平均来看，有一半的元素是已经按从小到大排序好的（不一定连在一起，可以混在没有排序好的元素中间），所以跟之前的选择排序相比，少做一半的比较，（对于选择排序来说，元素怎么排都不影响，它总是机械死板地从头开始遍历整个数组）那么算法复杂度也是选择排序的一半了，即N ² / 4次 。<br><img src="http://static.zybuluo.com/JuntongCHEN/p1bvjzldpmmzebmuvyyrmq0g/image_1ansqppdlkch1gtvr42odm1ngd4b.png" alt="image_1ansqppdlkch1gtvr42odm1ngd4b.png-61.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/zk1ymexljxsfx42twr64bye3/image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png" alt="image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png-117.8kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/6q5vq312dc6azh9oqpbp95d8/image_1ansqq35s19ur1kq82q113s94s55.png" alt="image_1ansqq35s19ur1kq82q113s94s55.png-62.5kB"><br>插入排序在已经部分排序好的数组里的表现：<br><img src="http://static.zybuluo.com/JuntongCHEN/0sgxfkk3zwsdx3gio4bcsdxl/image_1ansqqhs01d6d1mdm1i2ujln4u25v.png" alt="image_1ansqqhs01d6d1mdm1i2ujln4u25v.png-59.6kB"></p>
+<h2 id="3-Shellsort_（Shell是发明这个算法的人的名字）">3.Shellsort （Shell是发明这个算法的人的名字）</h2><p>插入排序比选择排序有进步，但它也有犯傻的时候，比如在右边的某个元素命名比前面7个元素都要小，但我们却要眼睁睁地看着这个元素连续与左边交换7次。聪明的你们想到了，直接一步到位，交换7个位置嘛！然后再每隔3个元素进行比较交换，再回到最基本的对每个元素进行比较交换，这就是<code>Shellsort</code>。<br><img src="http://static.zybuluo.com/JuntongCHEN/qy2dtsynwg7pxmnv74sif2w3/image_1ansqrt5suq71abp2f81o2fh8p79.png" alt="image_1ansqrt5suq71abp2f81o2fh8p79.png-72.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/ymq5ugclci53i6azcjpuwtuu/image_1ansqs7s317bjfmeuuk116cg177m.png" alt="image_1ansqs7s317bjfmeuuk116cg177m.png-148kB"><br>当然，那到底从每隔几个元素进行操作开始呢？这个间隔规律也是个数学问题，<strong>目前并没有一个严密的数学模型可以求得最优解</strong>，在这里介绍一个比较简单易用的：3x+1<br><img src="http://static.zybuluo.com/JuntongCHEN/qq2li9b7hpz7p9xxut0clgpf/image_1ansqsnor1tju1giv28guipc9a8g.png" alt="image_1ansqsnor1tju1giv28guipc9a8g.png-130.8kB"></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort排序。]]>
+    
+    </summary>
+    
+      <category term="algorithms" scheme="chenjuntong.me/tags/algorithms/"/>
+    
+      <category term="algorithms" scheme="chenjuntong.me/categories/algorithms/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[《Algorithms》摘录评注之壹：绪论]]></title>
-    <link href="chenjuntong.me/2015/11/24/algorithms/"/>
-    <id>chenjuntong.me/2015/11/24/algorithms/</id>
+    <link href="chenjuntong.me/2015/11/24/alg-01/"/>
+    <id>chenjuntong.me/2015/11/24/alg-01/</id>
     <published>2015-11-23T18:26:20.000Z</published>
     <updated>2016-07-17T10:02:58.539Z</updated>
     <content type="html"><![CDATA[<blockquote>
