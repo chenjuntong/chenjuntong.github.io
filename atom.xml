@@ -79,7 +79,7 @@
     <link href="chenjuntong.me/2015/12/03/alg-03/"/>
     <id>chenjuntong.me/2015/12/03/alg-03/</id>
     <published>2015-12-02T18:26:20.000Z</published>
-    <updated>2016-07-17T16:29:32.504Z</updated>
+    <updated>2016-07-18T11:59:28.582Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
 </blockquote>
@@ -91,7 +91,7 @@
 <h2 id="3-Shellsort_（Shell是发明这个算法的人的名字）">3.Shellsort （Shell是发明这个算法的人的名字）</h2><p>插入排序比选择排序有进步，但它也有犯傻的时候，比如在右边的某个元素命名比前面7个元素都要小，但我们却要眼睁睁地看着这个元素连续与左边交换7次。聪明的你们想到了，直接一步到位，交换7个位置嘛！然后再每隔3个元素进行比较交换，再回到最基本的对每个元素进行比较交换，这就是<code>Shellsort</code>。<br><img src="http://static.zybuluo.com/JuntongCHEN/qy2dtsynwg7pxmnv74sif2w3/image_1ansqrt5suq71abp2f81o2fh8p79.png" alt="image_1ansqrt5suq71abp2f81o2fh8p79.png-72.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/ymq5ugclci53i6azcjpuwtuu/image_1ansqs7s317bjfmeuuk116cg177m.png" alt="image_1ansqs7s317bjfmeuuk116cg177m.png-148kB"><br>当然，那到底从每隔几个元素进行操作开始呢？这个间隔规律也是个数学问题，<strong>目前并没有一个严密的数学模型可以求得最优解</strong>，在这里介绍一个比较简单易用的：3x+1<br><img src="http://static.zybuluo.com/JuntongCHEN/qq2li9b7hpz7p9xxut0clgpf/image_1ansqsnor1tju1giv28guipc9a8g.png" alt="image_1ansqsnor1tju1giv28guipc9a8g.png-130.8kB"></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort排序。]]>
+    <![CDATA[本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort。目前在Shellsort中并没有一个严密的数学模型可以求得最优解，在这里介绍一个比较简单易用的：3x+1。]]>
     
     </summary>
     
