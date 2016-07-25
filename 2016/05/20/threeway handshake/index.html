@@ -101,7 +101,7 @@
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/1qqd4k13hl9049uqnef3zi9o/image_1aj78clj7fmq1lidumdkrp5e71t.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/x30m4x57up90bbonn2szybvf/image_1aj78jofo16cq11041uvp1hds1qk82a.png">
 <meta property="og:image" content="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png">
-<meta property="og:updated_time" content="2016-05-21T13:34:28.595Z">
+<meta property="og:updated_time" content="2016-07-25T09:06:55.170Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="为什么在TCP协议中建立连接的握手需要三次？">
 <meta name="twitter:description" content="在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为三次握手。（假如你已经忘了的话，我在文末写了段WireShark抓包实战：TCP连接的建立）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：为什么在TCP协议中建立连接">
@@ -395,6 +395,9 @@
 <p>⑧第三次握手：<br><img src="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png" alt="image_1aj79cka2fpb1v7bhm8ns5v4v4b.png-33.5kB"><br>客户端再次发送确认包，标志位<code>ACK=1</code>，<code>SYN=0</code>，并且将服务器发来的序列号<code>seq</code>+1，放在自己确定字段<code>ack</code>中发送给对方，同时把自己的序列号<code>seq</code>加1再发送出去，即<code>seq=1</code>。</p>
 <p>至此TCP连接已经建立，客户端进入<code>ESTABLISHED</code>(已建立连接)状态，当服务端收到确认后，也进入 <code>ESTABLISHED</code>状态，它们之间便可以正式传输数据了。</p>
 <p>参考资料：<a href="http://dwz.cn/3p5PaP" target="_blank" rel="external">http://dwz.cn/3p5PaP</a></p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 
       
     </div>

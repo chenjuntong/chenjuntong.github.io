@@ -4,7 +4,7 @@
   <subtitle><![CDATA[背负青天而莫之夭阏]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="chenjuntong.me/"/>
-  <updated>2016-05-21T13:34:28.595Z</updated>
+  <updated>2016-07-25T09:06:55.170Z</updated>
   <id>chenjuntong.me/</id>
   
   <author>
@@ -19,7 +19,7 @@
     <link href="chenjuntong.me/2016/05/20/threeway%20handshake/"/>
     <id>chenjuntong.me/2016/05/20/threeway handshake/</id>
     <published>2016-05-20T14:46:24.000Z</published>
-    <updated>2016-05-21T13:34:28.595Z</updated>
+    <updated>2016-07-25T09:06:55.170Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>TCP is said to be <strong>connection-oriented</strong> because before one application process can<br>begin to send data to another, the two processes must first “handshake” with each<br>other…this connection-establishment procedure is often referred to as a <strong>three-way handshake</strong>. <code>——《Computer networking : a top-down approach》</code></p>
 </blockquote>
@@ -62,6 +62,9 @@
 <p>⑧第三次握手：<br><img src="http://static.zybuluo.com/JuntongCHEN/tnomczzn7eukhftuejgshgvi/image_1aj79cka2fpb1v7bhm8ns5v4v4b.png" alt="image_1aj79cka2fpb1v7bhm8ns5v4v4b.png-33.5kB"><br>客户端再次发送确认包，标志位<code>ACK=1</code>，<code>SYN=0</code>，并且将服务器发来的序列号<code>seq</code>+1，放在自己确定字段<code>ack</code>中发送给对方，同时把自己的序列号<code>seq</code>加1再发送出去，即<code>seq=1</code>。</p>
 <p>至此TCP连接已经建立，客户端进入<code>ESTABLISHED</code>(已建立连接)状态，当服务端收到确认后，也进入 <code>ESTABLISHED</code>状态，它们之间便可以正式传输数据了。</p>
 <p>参考资料：<a href="http://dwz.cn/3p5PaP" target="_blank" rel="external">http://dwz.cn/3p5PaP</a></p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[在任何一本计算机网络的教科书上，我们都会学到：应用程序在使用 TCP 通信之前，先要建立连接，而这个创建连接的过程被称为三次握手。（假如你已经忘了的话，我在文末写了段WireShark抓包实战：TCP连接的建立）接着，教材便会开始介绍三次握手的流程以及TCP报文段结构（TCP Segment Structure）。和喜欢追根溯源的历史故事不同，书本很少会涉及到一个问题：为什么在TCP协议中建立连接的握手需要三次？二次行不行？四次可以吗？“三”这个数字是怎么来的？与道家所讲的“一生二，二生三，三生万物”有关联吗？]]>
@@ -79,7 +82,7 @@
     <link href="chenjuntong.me/2015/12/03/alg-03/"/>
     <id>chenjuntong.me/2015/12/03/alg-03/</id>
     <published>2015-12-02T18:26:20.000Z</published>
-    <updated>2016-07-18T11:59:28.582Z</updated>
+    <updated>2016-07-25T09:06:10.466Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
 </blockquote>
@@ -89,6 +92,9 @@
 <h2 id="2-插入排序">2.插入排序</h2><p>每次都要从（当前的）头开始遍历，很麻烦，改进一下。<br>实现过程：从右边开始入手，只要当前的元素比左边的元素小，就跟左边交换，循环往复。</p>
 <p>算法复杂度：对于一个随机的数组，平均来看，有一半的元素是已经按从小到大排序好的（不一定连在一起，可以混在没有排序好的元素中间），所以跟之前的选择排序相比，少做一半的比较，（对于选择排序来说，元素怎么排都不影响，它总是机械死板地从头开始遍历整个数组）那么算法复杂度也是选择排序的一半了，即N ² / 4次 。<br><img src="http://static.zybuluo.com/JuntongCHEN/p1bvjzldpmmzebmuvyyrmq0g/image_1ansqppdlkch1gtvr42odm1ngd4b.png" alt="image_1ansqppdlkch1gtvr42odm1ngd4b.png-61.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/zk1ymexljxsfx42twr64bye3/image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png" alt="image_1ansqpv4p1cmn1cl1fmf1i0ml994o.png-117.8kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/6q5vq312dc6azh9oqpbp95d8/image_1ansqq35s19ur1kq82q113s94s55.png" alt="image_1ansqq35s19ur1kq82q113s94s55.png-62.5kB"><br>插入排序在已经部分排序好的数组里的表现：<br><img src="http://static.zybuluo.com/JuntongCHEN/0sgxfkk3zwsdx3gio4bcsdxl/image_1ansqqhs01d6d1mdm1i2ujln4u25v.png" alt="image_1ansqqhs01d6d1mdm1i2ujln4u25v.png-59.6kB"></p>
 <h2 id="3-Shellsort_（Shell是发明这个算法的人的名字）">3.Shellsort （Shell是发明这个算法的人的名字）</h2><p>插入排序比选择排序有进步，但它也有犯傻的时候，比如在右边的某个元素命名比前面7个元素都要小，但我们却要眼睁睁地看着这个元素连续与左边交换7次。聪明的你们想到了，直接一步到位，交换7个位置嘛！然后再每隔3个元素进行比较交换，再回到最基本的对每个元素进行比较交换，这就是<code>Shellsort</code>。<br><img src="http://static.zybuluo.com/JuntongCHEN/qy2dtsynwg7pxmnv74sif2w3/image_1ansqrt5suq71abp2f81o2fh8p79.png" alt="image_1ansqrt5suq71abp2f81o2fh8p79.png-72.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/ymq5ugclci53i6azcjpuwtuu/image_1ansqs7s317bjfmeuuk116cg177m.png" alt="image_1ansqs7s317bjfmeuuk116cg177m.png-148kB"><br>当然，那到底从每隔几个元素进行操作开始呢？这个间隔规律也是个数学问题，<strong>目前并没有一个严密的数学模型可以求得最优解</strong>，在这里介绍一个比较简单易用的：3x+1<br><img src="http://static.zybuluo.com/JuntongCHEN/qq2li9b7hpz7p9xxut0clgpf/image_1ansqsnor1tju1giv28guipc9a8g.png" alt="image_1ansqsnor1tju1giv28guipc9a8g.png-130.8kB"></p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[本节笔记将先介绍排序的API，再讲解数种常用的基本排序及具体实现，分别是：选择排序、插入排序以及Shellsort。目前在Shellsort中并没有一个严密的数学模型可以求得最优解，在这里介绍一个比较简单易用的：3x+1。]]>
@@ -106,12 +112,15 @@
     <link href="chenjuntong.me/2015/11/25/alg-02/"/>
     <id>chenjuntong.me/2015/11/25/alg-02/</id>
     <published>2015-11-24T18:26:20.000Z</published>
-    <updated>2016-07-17T16:30:37.302Z</updated>
+    <updated>2016-07-25T09:06:00.851Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
 </blockquote>
 <p>栈和队列是两种基本的数据结构类型，它们有不同的方式去对存储的数据进行操作。<br>具体操作有：插入（push）、移除（pop）、迭代（iterate）以及检查是否为空等。<br>两者的差别主要是数据的移动顺序：<br>栈：后进先出<br>队列：先进先出<br><img src="http://static.zybuluo.com/JuntongCHEN/uuhtyzk98w5fu2fjr2m8kusr/image_1ansq3r2mvm31t82f19ko6o919.png" alt="image_1ansq3r2mvm31t82f19ko6o919.png-79kB"><br>栈的链表实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/ugn9gcwzwf6ypiltckgjros2/image_1ansq7jqj999ep77nrh01ci51g.png" alt="image_1ansq7jqj999ep77nrh01ci51g.png-133.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/hciegdddfpjx3iel475mm97s/image_1ansq7rd7pftu4lc511471ss81t.png" alt="image_1ansq7rd7pftu4lc511471ss81t.png-146.3kB"><br>栈的数组实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/pkiwai3r00xdxw5adakks9gc/image_1ansq88td1328kmia6k16f11bv92n.png" alt="image_1ansq88td1328kmia6k16f11bv92n.png-66.9kB"><br>正如我们在数组实现这里所看到的，我们定义的数组容量是有限的，那么就会存放的元素就会出现“上溢”（数组放不下，要满溢出来了）或“下溢”（数组已经空了，还进行操作）的情况，所以我们需要一种“伸缩自如”的机制来防止这种溢出情况的发生，称为“resizing-array”。<br><img src="http://static.zybuluo.com/JuntongCHEN/kf6rzappviqeiq2k5xc7vn2t/image_1ansq8mish7613g3c5c67q96g3h.png" alt="image_1ansq8mish7613g3c5c67q96g3h.png-90.6kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/1hovl2an0cc4xric2vk5kwvy/image_1ansq900j1nhf17pi15oa1jgnhus3u.png" alt="image_1ansq900j1nhf17pi15oa1jgnhus3u.png-77.6kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/mvwlqolb7e2ir0jimyuipplk/image_1ansq96po8bhpl71jnk1s3h9q4b.png" alt="image_1ansq96po8bhpl71jnk1s3h9q4b.png-149.3kB"><br>其具体实现方法：<br>“伸”：如果原来的数组已满，那么创建一个新数组，容量为原来的两倍，同时把原来数组的元素拷贝进新数组。<br>“缩”：如果数组中的元素减少为容量的四分之一时，把数组容量减少为原来的一半。</p>
 <p>可伸缩的数组实现与链表实现对比：<br><img src="http://static.zybuluo.com/JuntongCHEN/a806iqg5fwnm1pyca88fawmg/image_1ansqalkspa51o8gtp91rfn1qn96c.png" alt="image_1ansqalkspa51o8gtp91rfn1qn96c.png-93.9kB"><br>队列的链表实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/q4y4xiczeiuvgry464p2woj8/image_1ansqbcbg9ghdulhfv1n7d5c576.png" alt="image_1ansqbcbg9ghdulhfv1n7d5c576.png-145.4kB"><br>队列的数组实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/rkthnmargwebp0xqd6x4d306/image_1ansqbq231r2g1g0jgcr1hri1s8780.png" alt="image_1ansqbq231r2g1g0jgcr1hri1s8780.png-75.3kB"><br>栈的应用实例，非常常见：比如浏览网页/打开文件夹后使用“后退”（回到最近的位置，后进先出）等等。<br><img src="http://static.zybuluo.com/JuntongCHEN/1obb57z6wtwb50jreru1exti/image_1ansqc82p5s918ap1tp4v2918ar8q.png" alt="image_1ansqc82p5s918ap1tp4v2918ar8q.png-131.6kB"></p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[栈和队列是两种基本的数据结构类型，它们有不同的方式去对存储的数据进行操作。具体操作有：插入（push）、移除（pop）、迭代（iterate）以及检查是否为空等。两者的差别主要是数据的移动顺序。]]>
@@ -129,7 +138,7 @@
     <link href="chenjuntong.me/2015/11/24/alg-01/"/>
     <id>chenjuntong.me/2015/11/24/alg-01/</id>
     <published>2015-11-23T18:26:20.000Z</published>
-    <updated>2016-07-17T10:02:58.539Z</updated>
+    <updated>2016-07-25T09:05:33.746Z</updated>
     <content type="html"><![CDATA[<blockquote>
 <p>本笔记基于<strong>ROBERT SEDGEWICK &amp; KEVIN WAYNE</strong>开设的《Algorithms》课程，同时配有同名教材。<br>slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。</p>
 </blockquote>
@@ -137,6 +146,9 @@
 <p>使用<code>Quick-Find</code>方法来解决，直接对数组的每一个元素进行检查和操作：<br><img src="http://static.zybuluo.com/JuntongCHEN/ya2zuxf9fqbka89h0w06g3au/image_1anntorff1qrj1a1i5l1f9n1cgf3h.png" alt="image_1anntorff1qrj1a1i5l1f9n1cgf3h.png-82.6kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/gqkp07l59bb8erfpm5m2e7bf/image_1anntpvmr1ek3prncji1tbi1tq94b.png" alt="image_1anntpvmr1ek3prncji1tbi1tq94b.png-60.2kB"></p>
 <p>使用这个方法的问题是成本太高了，对<code>N</code>个目标进行<code>N</code>次<code>union</code>连接操作共需要访问数组N²次。<br>试一试别的方法：使用<code>Quick-Union</code>（懒人方法），通过对元素的“根”来进行检查和操作。<br><img src="http://static.zybuluo.com/JuntongCHEN/q096dgb4uzlnf64gwzr27yk1/image_1anpn728n3du3bck1f162g1bms9.png" alt="image_1anpn728n3du3bck1f162g1bms9.png-69.9kB"><br>代码实现：<br><img src="http://static.zybuluo.com/JuntongCHEN/d3a68l8g591cw73btiboiwog/image_1anpn838v3bjlh9fqhsk11ka61g.png" alt="image_1anpn838v3bjlh9fqhsk11ka61g.png-61.3kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/3tezd1txe3mj7bc56c9h7r6x/image_1anpn8jkq2gf1aisnicus61kc49.png" alt="image_1anpn8jkq2gf1aisnicus61kc49.png-54.7kB"><br>但这个懒人办法也太慢了。前一个<code>Q-Find</code>的<code>union</code>操作要访问N次数组，同时它的“树”（把元素连接起来的样子想象成是树的枝桠）是扁平的，但是保持这样的扁平代价太大；后一个<code>Q-U</code>的“树”会变得非常高，使其find操作也可能需要访问N次数组。那怎么办呢？只要在操作树的时候进行“权衡”就能两全其美啦：<br><img src="http://static.zybuluo.com/JuntongCHEN/ccrrs825o1ysrzdj2lkzz7dn/image_1anpn992ese0114k13n21703kp13.png" alt="image_1anpn992ese0114k13n21703kp13.png-68.2kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/r9naarr63qdlhywlv1l3ucd1/image_1anpn9fdmnkgbnd4eql4l6nf1g.png" alt="image_1anpn9fdmnkgbnd4eql4l6nf1g.png-116kB"></p>
 <p>“权衡”之后<code>Q-Union</code>的树不再肆意地乱长，而是根据以小服大的方式比较均衡扁平地排列开来了。再想一想，还可以把树变得更加扁平吗？<br><img src="http://static.zybuluo.com/JuntongCHEN/izgeov2sy8b6m5rbzdhs1vzt/image_1anpna0setho17se1ifn1h3k17ul2a.png" alt="image_1anpna0setho17se1ifn1h3k17ul2a.png-58.6kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/u8airerxsjjhgu0pen6ylk3s/image_1anpna5uv9g51s9lst9anq1spu2n.png" alt="image_1anpna5uv9g51s9lst9anq1spu2n.png-54.9kB"><br>对，使用路径压缩！将检查过后的节点直接指向根，这样树就进一步扁平了。<br>对解决动态连接问题的这几种方法总结、对比一下，我们要追求在最坏情况下效率最高（成本最小）的方法：<br><img src="http://static.zybuluo.com/JuntongCHEN/3t4pmoq63r4z0nxacvu85c6e/image_1anpnaltkkdt43n1csu1b6o1j573h.png" alt="image_1anpnaltkkdt43n1csu1b6o1j573h.png-60.4kB"><br>现在来简单看一看如何分析算法（的效率/成本）：<br><img src="http://static.zybuluo.com/JuntongCHEN/oqfpnwdhgkv9pe2h0xvzgyam/image_1anpnb3s41fjbpal1v78vft1n5n4b.png" alt="image_1anpnb3s41fjbpal1v78vft1n5n4b.png-78.4kB"><br><img src="http://static.zybuluo.com/JuntongCHEN/at03dj6ceempqya4wcwkfmzs/image_1anpnb9pm13l223p1o9rcgsrfv4o.png" alt="image_1anpnb9pm13l223p1o9rcgsrfv4o.png-58.5kB"><br>使用“约等于”的波浪号标记来简化数字进行分析：<br><img src="http://static.zybuluo.com/JuntongCHEN/rvnoe455mwq93yib8r4h62cu/image_1anpnbvvrdja1bof19uonno4pb5i.png" alt="image_1anpnbvvrdja1bof19uonno4pb5i.png-93.4kB"><br>来看一下不同算法复杂度的增长速度：<br><img src="http://static.zybuluo.com/JuntongCHEN/xobmc54xbkeegkxxugmjtb5f/image_1anpnceq10hga6lpqphv376c.png" alt="image_1anpnceq10hga6lpqphv376c.png-116.6kB"><br>常用的用来标记算法复杂度的符号说明：<br><img src="http://static.zybuluo.com/JuntongCHEN/r1i9wy2go3yi3j324t3y4w8y/image_1anpng5lrk3jbq5gu81n7g1q1i7j.png" alt="image_1anpng5lrk3jbq5gu81n7g1q1i7j.png-42.8kB"></p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[本笔记基于ROBERT SEDGEWICK & KEVIN WAYNE开设的《Algorithms》课程，同时配有同名教材。slides本身内容丰富详实，所以我会先甄选出重点的篇幅整理出来并做简单批注，后续会添上对应算法题的演示。这是第壹篇笔记，让我们首先对算法有个直观的认识。]]>
@@ -154,7 +166,7 @@
     <link href="chenjuntong.me/2015/11/01/qiup/"/>
     <id>chenjuntong.me/2015/11/01/qiup/</id>
     <published>2015-11-01T11:51:02.000Z</published>
-    <updated>2016-07-16T11:47:16.062Z</updated>
+    <updated>2016-07-25T09:06:47.545Z</updated>
     <content type="html"><![CDATA[<p><i class="icon-paste"></i> 原文地址：<a href="http://www.theeffectiveengineer.com/blog/how-to-successfully-build-great-products-with-small-teams" target="_blank" rel="external">How a Small Team of 13 Engineers Successfully Builds a Product on 8 Different Platforms</a><br><i class="icon-pencil"></i> <strong><em>作者：Edmond Lau</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？</p>
@@ -180,6 +192,9 @@
 <p>纵观一个团队的成长进程，沟通通常是第一个碰上的大麻烦，任何能减少沟通摩擦的工具——无论它是Quip，Slack或者其他东西——都可以显著地提高团队的工作效率。把Quip整合到团队的工作流中让我们得以通力合作，这是传统如电子邮件和会议的沟通方式不可能达到的效果。同时它也帮助公司建立起公开透明的文化，因为邮件里的信息会在一部分收件人手里沉默。相比之下，Quip 的文档正逐渐成为团队里每一位成员愈发丰富的知识宝库。每一份文档的留言和讨论都有据可查，我们所有人都在同一页上。</p>
 <p>我们如今已经取得了很多进步，但前方漫漫长路依然充满挑战。假如你对在Quip工作很感兴趣，不妨移步到我们的招聘页面。假如你想要学习更多的具有可操作性以及经证实的方法策略来成为一名高效工程师，不妨看一下我的这本书，《The Effective Engineer》。</p>
 <p>这篇文章基于我在Quora上最开始写的一个答案，Slate也有转载。<br>①除了雄心壮志，Quora和Quip在许多方面都有共同点。它们都是由前Facebook CTO创立的，都从Benchmark风投拿到了A轮融资，当然，也都是从Qu起步的。<br>②我们的使命，来自Quora博客。<br>③我们的MySQL数据存储使用了一种类似于FriendFeed的非模式化MySQL设计，不同的是，我们并不使用Python对象序列化方法，而是采用了Protocol Buffers。<br>④Bret Taylor（译者注：Quip的创始人，前Facebook CTO）写过一篇更加鞭辟入里的技术文章，其详细描述了我们（在产品中）共同的C++库和React架构：React with C++: Building the Quip Mac and Windows Apps.</p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[在一个小巧玲珑如麻雀的团队里开发产品，你要怎么做才能孵化出一只万众瞩目的凤凰？自从在Quora工作以来（以及最近在Quip的这些年），我一直在努力地思考这个问题。我是在Quora和Quip分别只有12人和13人的时候加入的。这两家初创企业都有雄心勃勃的使命。Quora致力于分享和增长全世界的知识，同时建造一座互联网上的“亚历山大图书馆”。在Quip，我们立志于打造出新一代的生产力工具，它能让每一家公司的每一个人在每一天使用起来都非常享受。]]>
@@ -199,7 +214,7 @@
     <link href="chenjuntong.me/2015/10/29/instagram/"/>
     <id>chenjuntong.me/2015/10/29/instagram/</id>
     <published>2015-10-29T01:52:28.000Z</published>
-    <updated>2016-05-20T15:07:27.545Z</updated>
+    <updated>2016-07-25T09:06:37.754Z</updated>
     <content type="html"><![CDATA[<p><i class="icon-paste"></i> 原文地址：<a href="https://medium.com/backchannel/war-stories-3696d00207ff" target="_blank" rel="external">War Stories: Five Years of Building Instagram</a><br><i class="icon-pencil"></i> <strong><em>作者：Mike Krieger</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>　　2010年，在我们发布Instagram第一个版本的前一晚，我与联合创始人Kevin打赌，第一天大概会有多少人下载这款app。Kevin猜有2500人，我当时特别乐观，赌了把大的，押25000人。第二天，我简直不敢相信我的猜测分毫不差。<br>　　今天，在Instagram的五周岁之际，我们拥有来自世界各地的4亿用户，他们每天上传8000万份相片和视频。回望过去，我们在初代产品上就做到了在简洁和精巧中取得恰到好处的平衡，同时就在去年，我们回炉重造了「搜索&amp;发现」（Search &amp; Explore）功能，发布了全新的私密分享功能「Instagram Direct」，如「Layout」这样的创意拼图工具也应运而生。<br>　　过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。</p>
@@ -219,6 +234,9 @@
 <p>　　干货总结：简单的事情先做并不意味着你的解决办法能一劳永逸。我们已经学会对产品的演化进步保持开放的心态，有针对性地建立队伍——比如我们的数据科学队伍，以此应对快速扩张的Instagram社区。</p>
 <p>　　过去的五年对于我们中间很多人来说是一次激动人心的狂野之旅。在Instagram 5周岁生日之际，停下来回顾反思是极好的。我很确信我们的社区会持续成长，我们的产品也会更上一层楼，在Medium上从来就不缺“回顾我过去十年”这样的文章。让我们为下一个五年干杯！</p>
 <p>扩展阅读：<a href="https://www.quora.com/What-is-the-genesis-of-Instagram" target="_blank" rel="external">https://www.quora.com/What-is-the-genesis-of-Instagram</a></p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 ]]></content>
     <summary type="html">
     <![CDATA[过去5年，我们的团队一直在（谢天谢地）成长和进步，我们坚持恪守我们的信条：简单的事情先做，它也是下一个五年计划的核心。在这里我将回顾从搭建Instagram起过去的五年时间里，其中一些最重大的里程碑事件——有好的，有坏的，还有出乎意料的。我希望这里的一些经验教训能帮你们打造自己的团队和公司，使其茁壮成长。]]>
@@ -236,7 +254,7 @@
     <link href="chenjuntong.me/2015/08/23/elon%20musk/"/>
     <id>chenjuntong.me/2015/08/23/elon musk/</id>
     <published>2015-08-23T08:17:38.000Z</published>
-    <updated>2016-05-20T15:07:35.808Z</updated>
+    <updated>2016-07-25T09:06:26.050Z</updated>
     <content type="html"><![CDATA[<p><i class="icon-paste"></i> 原文地址：<a href="http://waitbutwhy.com/2015/05/elon-musk-the-worlds-raddest-man.html" target="_blank" rel="external">Elon Musk: The World’s Raddest Man</a><br><i class="icon-pencil"></i> <strong><em>作者：Tim Urban</em></strong><br><i class="icon-edit-sign"></i>   <strong><em>翻译：陈钧桐</em></strong><br><i class="icon-book"></i>  <strong><em>整理定稿：覃超</em></strong></p>
 <hr>
 <p>　　上个月，我接到一个让我虎躯一震的电话。<br><img src="http://ww3.sinaimg.cn/large/6ccda21fgw1eu3frc7dnfj20ul0oxdgt.jpg" alt="Call1"></p>
@@ -306,6 +324,9 @@
 <p>最后， 如何像 Elon Musk 一样厉害呢？ 做好的上面的三点 + N小时的“精深练习” + 生活规律 + 专注 + 坚持。</p>
 <p><strong>这些点说起来简单，但是做起来却都很难。所以，共勉。</strong></p>
 <p>— END —</p>
+<blockquote>
+<p>每篇文章除特殊声明外均以 CC BY-NC-SA 4.0 协议发布，非商业用途可以在保留署名和来源的情况下任意转载。</p>
+</blockquote>
 <p>　</p>
 <p>　　
 　　</p>
